@@ -1,0 +1,1 @@
+# Studying project Nickolai Kolin
