@@ -5,7 +5,9 @@
 @import "icons.sass"
 // Variables
 $font-family: "Alegreya Sans", sans-serif !default
+$text-color-primary: #292929
 $text-color-secondary: #365A49
+$bg-color: #F2F5F4
 
 $icon-color: #C6F7FF
 body
@@ -111,3 +113,52 @@ body
     &__description
         font-size: 16px
         line-height: 18px
+
+// Section WHY
+.why
+    padding: 100px 79px 114px
+    text-align: center
+    color: $text-color-primary
+    background-origin: border-box
+    background: no-repeat url('img/bg-leaf-grey.svg') left center
+    position: relative
+    &::after
+        content: ''
+        position: absolute
+        width: 161px
+        height: 315px
+        bottom: -111px
+        left: 0
+        background: no-repeat url('img/bg-raspberry.svg')
+.section-title
+    margin: 0
+    @include section-title
+.section-description
+    font-size: 18px
+    line-height: 22px
+    margin: 18px auto 0
+    width: 45%
+
+.why-advantages
+    display: flex
+    margin-top: 49px
+
+.why-advanteg
+    &:not(:first-of-type)
+        margin-left: 52px
+    &__img-holder
+        margin: 0 auto
+        border-radius: 50%
+        background-color: $bg-color
+        background-position: center
+        @include wh(128px)
+    &__header
+        font-size: 27px
+        line-height: 32.5px
+        font-weight: 700
+        margin: 20px 0 0 0
+    &__description
+        margin-top: 18px
+        font-size: 18px
+        line-height: 22px
+        font-weight: 300
