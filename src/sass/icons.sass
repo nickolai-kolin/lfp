@@ -1,0 +1,7 @@
+$icon_names_list: ("phone","delivery","leafs","ruler",)
+
+@each $icon in $icon_names_list
+    .icon-#{$icon}
+        background-image: url('img/icon-#{$icon}.svg')
+        background-repeat: no-repeat
+        background-position: top center

@@ -1,3 +1,4 @@
 .vscode/
 .idea/
 *.pyi
+.DS_Store
