@@ -7,8 +7,9 @@
 $font-family: "Alegreya Sans", sans-serif !default
 $text-color-primary: #292929
 $text-color-secondary: #365A49
-$bg-color: #F2F5F4
-
+$text-color-thirdly:#666666
+$bg-color-primary: #F2F5F4
+$bg-color-secondary: #F8FAF9
 $icon-color: #C6F7FF
 body
     font-family: $font-family
@@ -146,10 +147,19 @@ body
 .why-advanteg
     &:not(:first-of-type)
         margin-left: 52px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 70px
+            height: 24px
+            background: no-repeat url('img/icon-delimiter.svg')
+            left: -65px
+            top: 60px
     &__img-holder
         margin: 0 auto
         border-radius: 50%
-        background-color: $bg-color
+        background-color: $bg-color-primary
         background-position: center
         @include wh(128px)
     &__header
@@ -162,3 +172,49 @@ body
         font-size: 18px
         line-height: 22px
         font-weight: 300
+
+// Section Feedback
+
+.feedback-section
+    position: relative
+    padding: 58px 79px 63px
+    background: no-repeat url('img/bg-shysection-strawberry.svg') right 20px top 30px
+    &::after
+        $_: no-repeat url('img/bg-feedbacksection-berries.svg') bottom 71px left
+        background: $_, no-repeat url('img/bg-feedback-pattern.svg')
+        content: ""
+        position: absolute
+        width: 193px
+        height: 321px
+        left: 0
+
+.feedback
+    padding: 42px
+    font-size: 18px
+    margin-top: 32px
+    background: $bg-color-secondary no-repeat url('img/bg-feedback-raspberry.svg') right top 22px
+    &__avatar
+        width: 253px
+        heigh: 264px
+    &__content
+        display: flex
+        align-items: center
+    &__header
+        font-size: 27px
+        line-height: 32px
+        font-weight: 700
+        margin: 0
+    &__msg
+        margin-bottom: 0
+        font-weight: 400
+        line-height: 22px
+        color: $text-color-thirdly
+        margin-top: 12px
+    &__auth
+        font-weight: 500
+        line-height: 24px
+        margin-top: 25px
+
+.feedback-text-wrapper
+    margin-left: 38px
+    flex-basis: 463px
