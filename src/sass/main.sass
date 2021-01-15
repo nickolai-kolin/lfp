@@ -1,127 +1,27 @@
-// Adding normalize.sass
-@import "normalize.sass"
-@import "font.sass"
-@import "mixins.sass"
-@import "icons.sass"
-// Variables
-$font-family: "Alegreya Sans", sans-serif !default
-$text-color-primary: #292929
-$text-color-secondary: #365A49
-$text-color-thirdly:#666666
-$bg-color-primary: #F2F5F4
-$bg-color-secondary: #F8FAF9
-$icon-color: #C6F7FF
-body
-    font-family: $font-family
-    font-weight: normal
+// Settings
+@import "settings/normalize"
+@import "settings/reset"
+@import "settings/mixins"
+@import "settings/variables"
+@import "settings/fonts"
+@import "settings/base"
+@import "icons"
+// Components
+@import "components/section-wrapper"
+@import "components/title-wrapper"
+@import "components/hero"
+@import "components/container"
+@import "components/btn"
+@import "components/nav"
+@import "components/phone"
+@import "components/advantage"
 
-.page-wrapper
-    width: 1100px
-    margin: 0 auto
-
-// Hero
-.hero
-    padding: 24px 78px 50px 80px
-    background-origin: border-box
-    // background: no-repeat right 5% top 29% url('img/bg-bars.svg'), no-repeat right url('img/bg-leaf.svg')
-    background: no-repeat right url('img/bg-pattern-leaf.svg')
-    background-color: #61C4D9
-    color: #FFFFFF
-    position: relative
-    &::before
-        content: ''
-        position: absolute
-        width: 50%
-        height: 100%
-        // top: 50px
-        // left: 0
-        right: 10px
-        bottom: -50px
-        background: no-repeat url('img/bg-compozition.svg') right / contain
-    &::after
-        content: ''
-        position: absolute
-        width: 59px
-        height: 112px
-        bottom: -30px
-        left: 32px
-        background: no-repeat url(img/bg-leaf.svg) bottom left
-
-// Header
-
-.header
-    display: flex
-    justify-content: space-between
-    align-items: center
-
-.nav
-    &__link
-        font-size: 18px
-        line-height: 30px
-        font-weight: 400
-        @include link_reset
-        &:not(:first-of-type)
-            margin-left: 27px
-
-.phone
-    &__icon
-        width: 14px
-        height: 14px
-        display: inline-block
-        margin-right: 6px
-    &__num
-        font-size: 22px
-        @include link_reset
-// Hero main
-
-.hero-main
-    max-width: 350px
-    &__title
-        margin-top: 84px
-        text-transform: uppercase
-        font-size: 48px
-        line-height: 58px
-        font-weight: 700
-    &__description
-        font-size: 21px
-        line-height: 25px
-        margin-top: 17px
-    &__cta
-        font-size: 16px
-        line-height: 18px
-        text-transform: uppercase
-        color: $text-color-secondary
-        padding: 21px 41px 21px 41px
-        margin-top: 32px
-        background-color: #fff
-        border-radius: 100px
-        font-weight: 800
-        @include btn_reset
-
-// Advantages
-.advantages
-    margin-top: 64px
-    display: flex
-.advantage
-    display: flex
-    flex-basis: 166px
-    &__icon
-        display: inline-block
-        color: $icon-color
-        height: 40px
-        width: 40px
-        margin-right: 13px
-    &__description
-        font-size: 16px
-        line-height: 18px
-
-// Section WHY
 .why
     padding: 100px 79px 114px
     text-align: center
     color: $text-color-primary
     background-origin: border-box
-    background: no-repeat url('img/bg-leaf-grey.svg') left center
+    background: no-repeat url('../img/bg-leaf-grey.svg') left center
     position: relative
     &::after
         content: ''
@@ -130,7 +30,7 @@ body
         height: 315px
         bottom: -111px
         left: 0
-        background: no-repeat url('img/bg-raspberry.svg')
+        background: no-repeat url('../img/bg-raspberry.svg')
 .section-title
     margin: 0
     @include section-title
@@ -153,7 +53,7 @@ body
             position: absolute
             width: 70px
             height: 24px
-            background: no-repeat url('img/icon-delimiter.svg')
+            background: no-repeat url('../img/icon-delimiter.svg')
             left: -65px
             top: 60px
     &__img-holder
@@ -178,10 +78,10 @@ body
 .feedback-section
     position: relative
     padding: 58px 79px 63px
-    background: no-repeat url('img/bg-shysection-strawberry.svg') right 20px top 30px
+    background: no-repeat url('../img/bg-shysection-strawberry.svg') right 20px top 30px
     &::after
-        $_: no-repeat url('img/bg-feedbacksection-berries.svg') bottom 71px left
-        background: $_, no-repeat url('img/bg-feedback-pattern.svg')
+        $_: no-repeat url('../img/bg-feedbacksection-berries.svg') bottom 71px left
+        background: $_, no-repeat url('../img/bg-feedback-pattern.svg')
         content: ""
         position: absolute
         width: 193px
@@ -192,7 +92,7 @@ body
     padding: 42px
     font-size: 18px
     margin-top: 32px
-    background: $bg-color-secondary no-repeat url('img/bg-feedback-raspberry.svg') right top 22px
+    background: $bg-color-secondary no-repeat url('../img/bg-feedback-raspberry.svg') right top 22px
     &__avatar
         width: 253px
         heigh: 264px

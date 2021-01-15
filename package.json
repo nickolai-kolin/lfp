@@ -1,0 +1,26 @@
+{
+  "name": "chocco_project",
+  "version": "1.0.0",
+  "description": "+ Получить и применять знания в области адаптивной верстки",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass src/sass/main.sass dist/css/main.css --watch",
+    "pug": "pug src/pug/index.pug --out dist/ --watch --pretty",
+    "server": "live-server dist/ --port=8000 --browser='Google Chrome' --watch",
+    "watch": "npm run sass & npm run pug & npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickolai-kolin/lfp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickolai-kolin/lfp/issues"
+  },
+  "homepage": "https://github.com/nickolai-kolin/lfp#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

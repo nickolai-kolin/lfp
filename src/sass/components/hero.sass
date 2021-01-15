@@ -1,0 +1,53 @@
+.hero
+    background-origin: border-box
+    background: no-repeat url('../img/bg-pattern-leaf.svg') right bottom
+    background-color: #61C4D9
+    color: #FFFFFF
+    position: relative
+    &__container
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%  // Не понял, почему колонка на стала.
+      padding: 40px 0 86px
+    &__header
+      display: flex
+      justify-content: space-between
+    &__main
+      max-width: 350px
+    &__title
+      text-transform: uppercase
+      font-size: 48px
+      line-height: 58px
+      font-weight: 700
+      margin-bottom: 17px
+    &__subtitle
+      font-size: 21px
+      line-height: 25px
+      margin-bottom: 32px
+    &__img
+      position: relative
+      top: -20%
+    &__advantages
+      display: flex
+    &__description
+        font-size: 16px
+        line-height: 18px
+    &::before
+        content: ''
+        position: absolute
+        width: 400px
+        height: 315px
+        // top: 50px
+        // left: 0
+        right: 10px
+        bottom: -50px
+        background: no-repeat url('../img/bg-compozition.svg') right bottom
+    &::after
+        content: ''
+        position: absolute
+        width: 59px
+        height: 112px
+        bottom: -30px
+        left: 32px
+        background: no-repeat url(../img/bg-leaf.svg) bottom left

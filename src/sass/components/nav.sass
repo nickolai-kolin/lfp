@@ -1,0 +1,12 @@
+.nav
+    display: flex
+    justify-content: space-between
+    &__link
+        font-size: 18px
+        line-height: 30px
+        font-weight: 400
+        @include link_reset
+        &:not(:last-of-type)
+            margin-right: 27px
+        &:hover
+          color: $green
