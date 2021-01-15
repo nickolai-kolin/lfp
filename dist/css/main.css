@@ -257,7 +257,8 @@ body {
     margin-bottom: 32px; }
   .hero__img {
     position: relative;
-    top: -20%; }
+    top: -20%;
+    max-width: 100%; }
   .hero__advantages {
     display: flex; }
   .hero__description {
