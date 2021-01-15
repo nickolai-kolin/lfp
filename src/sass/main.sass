@@ -5,9 +5,9 @@
 @import "settings/variables"
 @import "settings/fonts"
 @import "settings/base"
+// Icons
 @import "icons"
 // Components
-@import "components/section-wrapper"
 @import "components/title-wrapper"
 @import "components/hero"
 @import "components/container"
@@ -15,64 +15,9 @@
 @import "components/nav"
 @import "components/phone"
 @import "components/advantage"
-
-.why
-    padding: 100px 79px 114px
-    text-align: center
-    color: $text-color-primary
-    background-origin: border-box
-    background: no-repeat url('../img/bg-leaf-grey.svg') left center
-    position: relative
-    &::after
-        content: ''
-        position: absolute
-        width: 161px
-        height: 315px
-        bottom: -111px
-        left: 0
-        background: no-repeat url('../img/bg-raspberry.svg')
-.section-title
-    margin: 0
-    @include section-title
-.section-description
-    font-size: 18px
-    line-height: 22px
-    margin: 18px auto 0
-    width: 45%
-
-.why-advantages
-    display: flex
-    margin-top: 49px
-
-.why-advanteg
-    &:not(:first-of-type)
-        margin-left: 52px
-        position: relative
-        &::before
-            content: ""
-            position: absolute
-            width: 70px
-            height: 24px
-            background: no-repeat url('../img/icon-delimiter.svg')
-            left: -65px
-            top: 60px
-    &__img-holder
-        margin: 0 auto
-        border-radius: 50%
-        background-color: $bg-color-primary
-        background-position: center
-        @include wh(128px)
-    &__header
-        font-size: 27px
-        line-height: 32.5px
-        font-weight: 700
-        margin: 20px 0 0 0
-    &__description
-        margin-top: 18px
-        font-size: 18px
-        line-height: 22px
-        font-weight: 300
-
+@import "components/section"
+@import "components/why"
+@import "components/cart-adv"
 // Section Feedback
 
 .feedback-section
