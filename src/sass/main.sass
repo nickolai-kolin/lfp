@@ -18,48 +18,6 @@
 @import "components/section"
 @import "components/why"
 @import "components/cart-adv"
-// Section Feedback
-
-.feedback-section
-    position: relative
-    padding: 58px 79px 63px
-    background: no-repeat url('../img/bg-shysection-strawberry.svg') right 20px top 30px
-    &::after
-        $_: no-repeat url('../img/bg-feedbacksection-berries.svg') bottom 71px left
-        background: $_, no-repeat url('../img/bg-feedback-pattern.svg')
-        content: ""
-        position: absolute
-        width: 193px
-        height: 321px
-        left: 0
-
-.feedback
-    padding: 42px
-    font-size: 18px
-    margin-top: 32px
-    background: $bg-color-secondary no-repeat url('../img/bg-feedback-raspberry.svg') right top 22px
-    &__avatar
-        width: 253px
-        heigh: 264px
-    &__content
-        display: flex
-        align-items: center
-    &__header
-        font-size: 27px
-        line-height: 32px
-        font-weight: 700
-        margin: 0
-    &__msg
-        margin-bottom: 0
-        font-weight: 400
-        line-height: 22px
-        color: $text-color-thirdly
-        margin-top: 12px
-    &__auth
-        font-weight: 500
-        line-height: 24px
-        margin-top: 25px
-
-.feedback-text-wrapper
-    margin-left: 38px
-    flex-basis: 463px
+@import "components/section-feedback"
+@import "components/feedback"
+@import "components/fixed-sidenav"
