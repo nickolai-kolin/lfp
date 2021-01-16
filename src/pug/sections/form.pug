@@ -1,36 +1,53 @@
 .section-wrapper.section-form
   .container
-    .section-header
-      h2.section-title.section-form__title закажите доставку
-    form.form(action='').form__row.gap
-      .form__col
+    h2.section__title.section-form__title закажите доставку
+    form.form(action='')
+      .form__group
         .form__row
-          .form__col
+          .form__group
             label.form__label(for="order-name") Имя
             input.form__input(type="text", name="", id='order-name')
-          .form__col
+          .form__group
             label.form__label(for="order-phone") Телефон
             input.form__input(type="text", name="", id='order-phone')
         .form__row
-          .form__col
+          .form__group
             label.form__label(for="order-street") Улица
             input.form__input(type="text", name="", id='order-street')
         .form__row
-          .form__col
+          .form__group
             label.form__label(for="order-streetnum") Дом
             input.form__input(type="text", name="", id='order-streetnum')
-          .form__col
+          .form__group
             label.form__label(for="order-block") Корпус
             input.form__input(type="text", name="", id='order-block')
-          .form__col
+          .form__group
             label.form__label(for="order-ap") Квартира
             input.form__input(type="text", name="", id='order-ap')
-          .form__col
+          .form__group
             label.form__label(for="order-floor") Этаж
             input.form__input(type="text", name="", id='order-floor')
-      .form__col
+      .form__group.form__group--ml
         .form__row
-          .form__col
+          .form__group
             label.form__label(for="order-msg") Комментарий
-            textarea.form__msg#order-msg(name="order-msg", cols="100", rows="40")
+            textarea.form__msg.form__input#order-msg(name="order-msg")
+        .form__row
+          .form__group.form__group--radio
+            input.form__input.form__input--radio(type="radio", name="order-payment", value='change-need', id='order-payment-1')
+            span.check 
+            label.form__label.form__label--inline(for="order-payment-1") Потребуется сдача
+          .form__group.form__group--radio
+            input.form__input.form__input--radio(type="radio", name="order-payment", value='cart-pay', id='order-payment-2')
+            span.check 
+            label.form__label.form__label--inline(for="order-payment-2") Оплата картой
+        .form__row
+          .form__group
+            label.form__label(for="order-msg") Комментарий
+            input.form__input(type="checkbox", name="order-payment", id='order-payment' hidden)
+        .from__row
+          .form__group
+            button.btn.btn-cta(type='submit') Заказать
+            button.btn(type='reset') Очистить
+
 

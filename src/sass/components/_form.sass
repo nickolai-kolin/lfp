@@ -1,22 +1,40 @@
 .form
+  display: flex
   color: $green
-  max-width: 100%
+  &__group
+    flex: 1
+    &:not(:first-of-type)
+      margin-left: 12px
+    &--ml
+      margin-left: 27px
+    &--radio
+      display: flex
+      align-items: center
   &__row
     display: flex
     &:not(:last-of-type)
-      margin-bottom: 12px
-  &__col
-    // flex: 1
-    justify-content: space-between
+      margin-bottom: 20px
+  &__cell
+    display: flex
   &__label
     display: block
     font-size: 18px
     line-height: 21.6px
     font-weight: 400
+    resize: none
+    flex-basis: 100%
+    margin-bottom: 3px
+    &:hover
+      cursor: pointer
+    &--inline
+      display: inline-block
+      margin-bottom: 0
+
   &__msg
     display: block
-    max-width: 450px
-    max-height: 150px
+    width: 100%
+    min-height: 150px
+    max-width: 100%
     overflow: auto
   &__input
     display: block
@@ -30,6 +48,11 @@
     line-height: 20px
     &:focus
       outline: 3px solid $green-light
+    &--radio
+      display: none
+      &:checked + .check
+        color: red
+        
 
 .gap > .form__col
   flex-basis: 95%

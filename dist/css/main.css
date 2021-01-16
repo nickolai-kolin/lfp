@@ -148,7 +148,7 @@ table {
 td, th {
   padding: 0; }
 
-* {
+*, p {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
@@ -291,15 +291,15 @@ body {
   border: 0;
   outline: 0;
   border: none;
-  background: none; }
+  background: none;
+  font-size: 16px;
+  padding: 21px 41px;
+  color: #497870;
+  line-height: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 100px; }
   .btn-cta {
-    padding: 21px 41px;
-    color: #497870;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 800;
-    text-transform: uppercase;
-    border-radius: 100px;
     background-color: #FFFFFF; }
     .btn-cta:hover {
       cursor: pointer;
@@ -354,7 +354,7 @@ body {
 .section-header {
   margin-bottom: 50px; }
 
-.section-title {
+.section__title {
   font-size: 48px;
   line-height: 58px;
   text-transform: uppercase;
@@ -498,23 +498,41 @@ body {
     margin-bottom: 61px; }
 
 .form {
-  color: #497870;
-  max-width: 100%; }
+  display: flex;
+  color: #497870; }
+  .form__group {
+    flex: 1; }
+    .form__group:not(:first-of-type) {
+      margin-left: 12px; }
+    .form__group--ml {
+      margin-left: 27px; }
+    .form__group--radio {
+      display: flex;
+      align-items: center; }
   .form__row {
     display: flex; }
     .form__row:not(:last-of-type) {
-      margin-bottom: 12px; }
-  .form__col {
-    justify-content: space-between; }
+      margin-bottom: 20px; }
+  .form__cell {
+    display: flex; }
   .form__label {
     display: block;
     font-size: 18px;
     line-height: 21.6px;
-    font-weight: 400; }
+    font-weight: 400;
+    resize: none;
+    flex-basis: 100%;
+    margin-bottom: 3px; }
+    .form__label:hover {
+      cursor: pointer; }
+    .form__label--inline {
+      display: inline-block;
+      margin-bottom: 0; }
   .form__msg {
     display: block;
-    max-width: 450px;
-    max-height: 150px;
+    width: 100%;
+    min-height: 150px;
+    max-width: 100%;
     overflow: auto; }
   .form__input {
     display: block;
@@ -528,6 +546,17 @@ body {
     line-height: 20px; }
     .form__input:focus {
       outline: 3px solid #DEE2BD; }
+    .form__input--radio {
+      display: none; }
+      .form__input--radio:checked + .check {
+        color: red; }
 
 .gap > .form__col {
   flex-basis: 95%; }
+
+.check {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer; }
