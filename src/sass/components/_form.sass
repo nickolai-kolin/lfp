@@ -3,13 +3,15 @@
   color: $green
   &__group
     flex: 1
-    &:not(:first-of-type)
-      margin-left: 12px
+    margin-left: 12px
+    &:first-of-type
+      margin-left: 0
     &--ml
       margin-left: 27px
     &--radio
       display: flex
       align-items: center
+      position: relative
   &__row
     display: flex
     &:not(:last-of-type)
@@ -22,13 +24,13 @@
     line-height: 21.6px
     font-weight: 400
     resize: none
-    flex-basis: 100%
     margin-bottom: 3px
     &:hover
       cursor: pointer
     &--inline
       display: inline-block
-      margin-bottom: 0
+      padding-left: 35px
+      position: relative
 
   &__msg
     display: block
@@ -49,10 +51,12 @@
     &:focus
       outline: 3px solid $green-light
     &--radio
-      display: none
-      &:checked + .check
-        color: red
-        
-
-.gap > .form__col
-  flex-basis: 95%
+      @include hide
+      &:checked + .cinput__radio
+        &::before
+          display: block
+    &--checkbox
+      @include hide
+      &:checked + .cinput__checkbox
+        &::before
+          display: block

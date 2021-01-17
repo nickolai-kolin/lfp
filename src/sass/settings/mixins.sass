@@ -1,17 +1,23 @@
 @mixin link_reset
-    // Link reset
-    color: inherit
-    text-decoration: none
-    font-style: normal
+  color: inherit
+  text-decoration: none
+  font-style: normal
 
 @mixin btn_reset
-    display: inline-block
-    outline: none
-    border: none
-    &:hover
-        cursor: pointer
+  display: inline-block
+  outline: none
+  border: none
+  &:hover
+    cursor: pointer
 
 @mixin wh($w,$h: $w)
-    width: $w
-    height: $h
+  width: $w
+  height: $h
 
+@mixin hide
+  position: absolute
+  left: -9999px
+  top: 0
+
+
+  

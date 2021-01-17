@@ -34,20 +34,21 @@
             textarea.form__msg.form__input#order-msg(name="order-msg")
         .form__row
           .form__group.form__group--radio
-            input.form__input.form__input--radio(type="radio", name="order-payment", value='change-need', id='order-payment-1')
-            span.check 
             label.form__label.form__label--inline(for="order-payment-1") Потребуется сдача
+              input.form__input.form__input--radio(type="radio", name="order-payment", value='change-need', id='order-payment-1')
+              span.cinput.cinput__radio
           .form__group.form__group--radio
-            input.form__input.form__input--radio(type="radio", name="order-payment", value='cart-pay', id='order-payment-2')
-            span.check 
             label.form__label.form__label--inline(for="order-payment-2") Оплата картой
+              input.form__input.form__input--radio(type="radio", name="order-payment", value='cart-pay', id='order-payment-2')
+              span.cinput.cinput__radio 
         .form__row
           .form__group
-            label.form__label(for="order-msg") Комментарий
-            input.form__input(type="checkbox", name="order-payment", id='order-payment' hidden)
+            label.form__label.form__label--inline(for="order-callback") Не перезванивать
+              input.form__input.form__input--checkbox(type="checkbox", name="order-callback", id='order-callback')
+              span.cinput.cinput__checkbox
         .from__row
           .form__group
             button.btn.btn-cta(type='submit') Заказать
-            button.btn(type='reset') Очистить
+            button.btn.btn-cta--text--normal(type='reset') Очистить
 
 

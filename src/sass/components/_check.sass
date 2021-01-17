@@ -1,7 +1,39 @@
-.check
+.cinput
+  display: block
   width: 25px
   height: 25px
   background-color: #fff
-  border-radius: 50%
   cursor: pointer
-  // margin-right: 10px
+  position: absolute
+  left: 0
+  top: -2px
+  &__radio
+    border-radius: 50%
+    &:before
+      display: none
+      position: absolute
+      border-radius: 50%
+      content: ""
+      width: 13px
+      height: 13px
+      background-color: $green
+      top: 6px
+      left: 6px
+  &__checkbox
+    &:before
+      display: none
+      position: absolute
+      border-radius: 2px
+      border: 4px solid $green
+      border-left: none
+      border-top: none 
+      content: ""
+      width: 3px
+      height: 8px
+      // background-color: $green
+      top: 6px
+      left: 10px
+      transform: rotateZ(45deg)
+
+
+  // &__checkbox
