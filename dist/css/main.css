@@ -484,20 +484,26 @@ body {
   transform: translateY(-50%); }
   .fixed-sidenav__link {
     display: block;
-    padding: 4px;
-    border: 1px solid transparent; }
+    width: 18px;
+    height: 18px;
+    border: 1px solid transparent;
+    position: relative; }
     .fixed-sidenav__link:not(:last-of-type) {
       margin-bottom: 7px; }
     .fixed-sidenav__link:hover, .fixed-sidenav__link--active {
       cursor: pointer;
       border-radius: 50%;
       border: 1px solid #fff; }
-  .fixed-sidenav__inner {
-    width: 9px;
-    height: 9px;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    display: block; }
+    .fixed-sidenav__link::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px; }
 
 .section-form {
   display: flex;
