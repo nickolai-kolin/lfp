@@ -181,9 +181,17 @@ h7 {
   margin: 0;
   padding: 0; }
 
+html {
+  font-size: 16px; }
+
 body {
   font-family: "Alegreya Sans", sans-serif;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.2; }
+
+img {
+  max-width: 100%; }
 
 .icon-phone {
   background-image: url("../img/icon-phone.svg");
@@ -253,15 +261,12 @@ body {
     font-weight: 700;
     margin-bottom: 17px; }
   .hero__subtitle {
-    font-size: 21px;
+    font-size: 1.3125rem;
     line-height: 25px;
     margin-bottom: 32px; }
   .hero__img {
     position: relative;
     max-width: 100%; }
-  .hero__description {
-    font-size: 16px;
-    line-height: 18px; }
   .hero::before {
     content: '';
     position: absolute;
@@ -355,18 +360,22 @@ body {
   height: 100vh;
   min-height: 650px; }
 
-.section__title {
-  font-size: 48px;
-  line-height: 58px;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: center; }
-
-.section__description {
-  font-size: 18px;
-  line-height: 22px;
-  margin: 18px auto 0;
-  width: 45%; }
+.section {
+  height: 100vh;
+  min-height: 40.625rem; }
+  .section__title {
+    font-size: 3rem;
+    line-height: 1.20833;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .section__title--text--center {
+      text-align: center; }
+  .section__description {
+    width: 45%;
+    line-height: 1.22222; }
+  .section__subtitle {
+    margin: 18px auto 0;
+    font-size: 1.125rem; }
 
 .why {
   color: #292929;

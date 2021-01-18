@@ -4,7 +4,7 @@
   "description": "+ Получить и применять знания в области адаптивной верстки",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch src/sass/main.sass dist/css/main.css",
+    "sass": "node-sass src/sass/main.sass -wo dist/css/",
     "pug": "pug src/pug/index.pug --out dist/ --watch --pretty",
     "server": "live-server dist/ --port=8000 --browser='Google Chrome' --watch",
     "watch": "npm run sass & npm run pug & npm run server"

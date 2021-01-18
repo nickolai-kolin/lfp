@@ -3,14 +3,20 @@
   min-height: 650px
 
 .section
+  height: 100vh
+  min-height: rem(650px)
   &__title
-    font-size: 48px
-    line-height: 58px
+    font-size: rem(48px)
+    line-height: ratio(58,48)
     text-transform: uppercase
     font-weight: 700
-    text-align: center
+    &--text--center
+      text-align: center
+
   &__description
-    font-size: 18px
-    line-height: 22px
-    margin: 18px auto 0
     width: 45%
+    line-height: ratio(22,18)
+  &__subtitle
+    margin: 18px auto 0
+    font-size: rem(18px)
+
