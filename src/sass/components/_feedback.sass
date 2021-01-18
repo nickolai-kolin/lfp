@@ -1,0 +1,43 @@
+.feedback
+  background: #F8FAF9 no-repeat url('../img/bg-feedback-raspberry.svg') right top rem(22px)
+  padding: rem(42px)
+  &__panel
+    display: flex
+    align-items: center
+  &__avatar
+    max-width: 100%
+    margin-right: rem(40px)
+  &__tab
+    outline: none
+    overflow: hidden
+    border: none
+    width: rem(74px)
+    height: rem(74px)
+    border-radius: 50%
+    &:not(:last-of-type)
+      margin-right: rem(6px)
+    &--active
+      border: rem(6px) solid $green
+  &__tabava
+    display: block
+    max-width: 100%
+  &__text
+    flex-basis: rem(386px)
+  &__header
+    font-size: rem(27px)
+    line-height: rem(32px)
+    font-weight: 700
+    margin-bottom: rem(12px)
+  &__msg
+    margin-bottom: rem(25px)
+    font-weight: 400
+    line-height: rem(22px)
+    color: $grey
+    margin-top: rem(12px)
+  &__auth
+    font-weight: 500
+    line-height: rem(24px)
+  &__tablist
+    display: flex
+    justify-content: center
+ 

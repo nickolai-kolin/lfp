@@ -2,11 +2,9 @@
     display: flex
     justify-content: space-between
     &__link
-        font-size: 18px
-        line-height: 30px
         font-weight: 400
-        @include link_reset
+        line-height: rem(30px)
         &:not(:last-of-type)
-            margin-right: 27px
+            margin-right: rem(27px)
         &:hover
           color: $green

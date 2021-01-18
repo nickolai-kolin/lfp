@@ -1,0 +1,24 @@
+.cart-adv
+  flex-basis: rem(276px)
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  &__img
+    border-radius: 50%
+    background-position: center
+    background-color: $grey-light
+    margin-bottom: rem(20px)
+    width: rem(128px)
+    height: rem(128px)
+  &__header
+    font-size: rem(27px)
+    line-height: ratio(32,27)
+    font-weight: 700
+    margin-bottom: rem(18px)
+  &:not(:first-of-type)
+    &::before
+      content: url('../img/icon-delimiter.svg')
+      position: absolute
+      left: rem(-65px)
+      top: rem(60px)
