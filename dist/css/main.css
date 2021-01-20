@@ -292,7 +292,7 @@ a {
         color: #497870; }
   .nav__burger {
     font-size: 2rem;
-    padding: .4rem; }
+    padding: 6px; }
     @media screen and (min-width: 992px) {
       .nav__burger {
         display: none; } }
@@ -661,43 +661,37 @@ a {
     font-size: 1.3125rem;
     line-height: 1.5625rem;
     margin-bottom: 3vh;
-    width: 60%; }
+    width: 80%; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .hero-section__subtitle {
         width: 50%; } }
     @media screen and (min-width: 992px) {
       .hero-section__subtitle {
         width: 100%; } }
-  .hero-section__img {
-    position: relative;
-    max-width: 100%; }
-    .hero-section__img-wrap {
-      width: 73%; }
-      .hero-section__img-wrap::after {
-        content: '';
-        top: 10%;
-        left: 0;
-        height: 30%;
-        width: 100%;
-        max-width: 100%;
-        position: absolute;
-        background: no-repeat url("../img/bg-compozition.svg") center;
-        background-size: contain; }
-        @media screen and (min-width: 480px) {
-          .hero-section__img-wrap::after {
-            top: 25%; } }
-        @media screen and (min-width: 992px) {
-          .hero-section__img-wrap::after {
-            display: none; } }
-        @media screen and (max-width: 479px) {
-          .hero-section__img-wrap::after {
-            width: 50%; } }
-        @media screen and (min-width: 768px) {
-          .hero-section__img-wrap::after {
-            width: 100%; } }
-        @media screen and (max-width: 991px) {
-          .hero-section__img-wrap::after {
-            margin-bottom: 3vh; } }
+  .hero-section__img-wrap {
+    width: 53%; }
+    .hero-section__img-wrap::after {
+      content: '';
+      top: 12%;
+      left: 0;
+      height: 30%;
+      width: 100%;
+      max-width: 100%;
+      position: absolute;
+      background: no-repeat url("../img/bg-compozition.svg") center center;
+      background-size: contain; }
+      @media screen and (min-width: 480px) {
+        .hero-section__img-wrap::after {
+          top: 20%; } }
+      @media screen and (min-width: 768px) {
+        .hero-section__img-wrap::after {
+          top: 30%; } }
+      @media screen and (min-width: 992px) {
+        .hero-section__img-wrap::after {
+          display: none; } }
+      @media screen and (max-width: 991px) {
+        .hero-section__img-wrap::after {
+          margin-bottom: 3vh; } }
   .hero-section::before {
     display: none;
     content: url("../img/bg-compozition.svg");

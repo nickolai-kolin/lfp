@@ -56,36 +56,31 @@
     font-size: rem(21px)
     line-height: rem(25px)
     margin-bottom: 3vh
-    width: 60%
+    width: 80%
     @include tablet-only
       width: 50%
     @include desktop
       width: 100%
     
   &__img
-    position: relative
-    max-width: 100%
-    
     &-wrap
-      width: 73%
+      width: 53%
       &::after
         content: ''
-        top: 10%
+        top: 12%
         left: 0
         height: 30%
         width: 100%
         max-width: 100%
         position: absolute
-        background: no-repeat url('../img/bg-compozition.svg') center
+        background: no-repeat url('../img/bg-compozition.svg') center center
         background-size: contain
         @include mobile
-          top: 25%
+          top: 20%
+        @include tablet
+          top: 30%
         @include desktop
           display: none
-        @include until($mobile) // < 480px
-          width: 50%
-        @include tablet() // > 768px
-          width: 100%
         @include until($desktop) // < 992px
           margin-bottom: 3vh
 
