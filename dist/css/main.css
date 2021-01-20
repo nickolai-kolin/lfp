@@ -291,7 +291,9 @@ button {
         color: #497870; }
   .nav__burger {
     font-size: 2rem;
-    padding: 6px; }
+    padding: 6px;
+    background: transparent;
+    color: #FFFFFF; }
     @media screen and (min-width: 992px) {
       .nav__burger {
         display: none; } }
