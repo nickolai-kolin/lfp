@@ -4,6 +4,7 @@
   top: 50%
   z-index: 1000
   transform: translateY(-50%)
+  display: none
   &__link
     display: block
     width: 18px
@@ -26,4 +27,6 @@
       border-radius: 50%
       top: 4px
       left: 4px
+  @include desktop
+    display: block
 
