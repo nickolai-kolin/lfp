@@ -663,7 +663,8 @@ button {
     margin-bottom: 3vh; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .hero-section__subtitle {
-        width: 50%; } }
+        width: 50%;
+        margin: 0 auto; } }
     @media screen and (min-width: 992px) {
       .hero-section__subtitle {
         width: 100%; } }
