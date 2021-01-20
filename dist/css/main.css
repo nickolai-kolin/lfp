@@ -659,12 +659,11 @@ button {
         margin-bottom: 2vh; } }
   .hero-section__subtitle {
     font-size: 1.3125rem;
-    line-height: 1.5625rem;
-    margin-bottom: 3vh; }
+    line-height: 1.5625rem; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .hero-section__subtitle {
         width: 50%;
-        margin: 0 auto; } }
+        margin: 0 auto 3vh; } }
     @media screen and (min-width: 992px) {
       .hero-section__subtitle {
         width: 100%; } }
