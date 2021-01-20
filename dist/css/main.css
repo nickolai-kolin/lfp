@@ -656,12 +656,12 @@ a {
         margin-bottom: 1.0625rem; } }
     @media screen and (max-width: 479px) {
       .hero-section__title {
-        font-size: 2rem; } }
+        font-size: 2rem;
+        margin-bottom: 2vh; } }
   .hero-section__subtitle {
     font-size: 1.3125rem;
     line-height: 1.5625rem;
-    margin-bottom: 3vh;
-    width: 80%; }
+    margin-bottom: 3vh; }
     @media screen and (min-width: 768px) and (max-width: 991px) {
       .hero-section__subtitle {
         width: 50%; } }
