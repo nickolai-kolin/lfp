@@ -66,6 +66,8 @@
   &__img
     &-wrap
       width: 53%
+      @include until($desktop) // < 992px
+        margin-bottom: 3vh
       &::after
         content: ''
         top: 12%
@@ -82,8 +84,6 @@
           top: 30%
         @include desktop
           display: none
-        @include until($desktop) // < 992px
-          margin-bottom: 3vh
 
   &::before // FOR HERO section
     display: none 

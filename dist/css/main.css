@@ -670,6 +670,9 @@ a {
         width: 100%; } }
   .hero-section__img-wrap {
     width: 53%; }
+    @media screen and (max-width: 991px) {
+      .hero-section__img-wrap {
+        margin-bottom: 3vh; } }
     .hero-section__img-wrap::after {
       content: '';
       top: 12%;
@@ -689,9 +692,6 @@ a {
       @media screen and (min-width: 992px) {
         .hero-section__img-wrap::after {
           display: none; } }
-      @media screen and (max-width: 991px) {
-        .hero-section__img-wrap::after {
-          margin-bottom: 3vh; } }
   .hero-section::before {
     display: none;
     content: url("../img/bg-compozition.svg");
