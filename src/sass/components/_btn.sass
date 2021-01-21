@@ -1,5 +1,5 @@
 .btn
-  font-size: rem(16px)
+  font-size: 1rem
   line-height: ratio(18,16)
   padding: rem(21px) rem(41px)
   font-weight: 800
@@ -7,15 +7,27 @@
   text-transform: uppercase
   background-color: $white
   color: $green
-  
   &:hover
     background-color: $green-darken
     color: $white
+  &--inversed
+    background-color: $green
+    color: $white
+    &:hover
+      background-color: $white
+      color: $green
+  @include until($mobile)
+    padding: rem(11px) rem(21px)
+    font-weight: 400
+    text-transform: capitalize
   
   &-link
     padding: rem(21px) rem(41px)
-    &:active
-      background-color: $green
+    background: none
+    &:hover
+      background: none
+      color: $green-darken
+      // background-color: $green
   &-cta--inversed
     background-color: $green-darken
     color: $white

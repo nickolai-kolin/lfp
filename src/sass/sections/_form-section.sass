@@ -5,4 +5,9 @@
   background-size: cover
   &__title
     color: $green
-    margin-bottom: 61px
+    text-align: center
+    @include until($mobile)
+      font-size: 1.2rem
+      margin-bottom: 0.5rem
+    @include desktop
+      margin-bottom: rem(61px)

@@ -1,5 +1,6 @@
 .feedback
   &__panel
+    position: relative
     padding-top: 5%
     background: #F8FAF9 no-repeat url('../img/bg-feedback-raspberry.svg') right top rem(22px)
     display: flex
@@ -12,8 +13,20 @@
       flex-direction: column
       justify-content: flex-start
       flex-grow: 0
-    @include desktop
+    @include tablet
       padding: rem(42px)
+    &::before
+      // Circle 83x83px
+      @include tablet
+        content: ""
+        width: 83px
+        height: 83px
+        border-radius: 50%
+        background-color: #fff
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -56%)
   &__tablist
     display: flex
     justify-content: center
@@ -21,6 +34,7 @@
     @include desktop
       margin-top: 1rem
   &__avatar-wrap
+    position: relative
     height: 100px
     width: 100px
     @include mobile
@@ -51,25 +65,27 @@
     text-align: center
     @include desktop
       text-align: left
-      flex-basis: rem(386px)
+      flex-basis: rem(420px)
   &__header
     font-size: rem(27px)
     line-height: rem(32px)
     font-weight: 700
-    max-width: 80%
+    width: 80%
     margin: 0 auto
     @include until($mobile)
       line-height: 1.1
+    @include desktop
+      width: 100%
   &__msg
-    margin-bottom: rem(25px)
     font-weight: 400
     line-height: rem(22px)
     color: $grey
     margin-top: rem(12px)
     @include until($mobile)
       line-height: 1
+    @include desktop
+      margin-bottom: rem(25px)
+
   &__auth
     font-weight: 500
     line-height: rem(24px)
-  &::after
-    // TODO Add circle 83x83px

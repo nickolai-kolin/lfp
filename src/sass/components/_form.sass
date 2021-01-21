@@ -1,21 +1,45 @@
 .form
   display: flex
   color: $green
+  flex-direction: column
+  @include tablet-only
+    width: 60%
+    margin: 0 auto
+  @include desktop
+    flex-direction: row
   &__group
     flex: 1
     margin-left: rem(12px)
     &:first-of-type
       margin-left: 0
     &--ml
-      margin-left: rem(27px)
+      margin-left: 0
+      @include desktop
+        margin-left: rem(27px)
+    &--mt
+      margin-top: .5rem
+      @include desktop
+        margin-top: 0
+    &--text--center
+      text-align: center
+      @include desktop
+        text-align: left
     &--radio
       display: flex
       align-items: center
       position: relative
   &__row
     display: flex
+    align-items: center
     &:not(:last-of-type)
-      margin-bottom: rem(20px)
+      margin-bottom: 1rem
+      @include desktop
+        margin-bottom: rem(20px)
+    &--tablet-alignCenter
+      @include tablet
+        align-items: flex-start
+
+    
   &__cell
     display: flex
   &__label
@@ -33,15 +57,19 @@
     min-height: rem(150px)
     max-width: 100%
     overflow: auto
+    @include until($mobile)
+      min-height: rem(50px)
   &__input
     display: block
     width: 100%
     border: none
     border-radius: rem(4px)
-    padding: rem(18px) rem(12px) rem(20px)
     color: $black
     font-family: "Open Sans", sans-serif
     line-height: rem(20px)
+    padding: .5rem rem(10px)
+    @include desktop
+      padding: rem(18px) rem(12px) rem(20px)
     &:focus
       outline: rem(3px) solid $green-light
     &--radio

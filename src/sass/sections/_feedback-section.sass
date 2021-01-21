@@ -12,15 +12,22 @@
     margin-bottom: 100*(10vh/800)
     @include mobile
       margin-bottom: 100*(20vh/800) // 800px - Figma height
-    @include desktop
-      margin-bottom: rem(40px)
+    @include tablet
+      margin-bottom: rem(33px)
   // Bg
-  // &::after
-  //   $_: no-repeat url('../img/bg-feedbacksection-berries.svg') bottom rem(71px) left
-  //   background: $_, no-repeat url('../img/bg-feedback-pattern.svg')
-  //   content: ""
-  //   position: absolute
-  //   width: rem(193px)
-  //   height: rem(321px)
-  //   left: 0
-  //   bottom: rem(-160px)
+  &::after
+    display: none
+    $_: no-repeat url('../img/bg-feedbacksection-berries.svg') top left
+    background: $_, no-repeat url('../img/bg-feedback-pattern.svg') top left
+    content: ""
+    position: absolute
+    width: 80px
+    height: 160px
+    left: 0
+    bottom: -5rem
+    background-size: contain
+    @include mobile
+      display: block
+    @include tablet
+      width: rem(193px)
+      height: rem(321px)
