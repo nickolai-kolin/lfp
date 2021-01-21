@@ -1,4 +1,4 @@
-$black: #292929
+// $black: #292929
 .why-section
   color: $black
   background: no-repeat url('../img/bg-leaf-grey.svg') left center
@@ -7,11 +7,14 @@ $black: #292929
   display: flex
   text-align: center
   &__header
-    margin-bottom: 50px
+    margin-bottom: 1rem
+    @include desktop
+      margin-bottom: 50px
   &__advantages
     display: flex
-    margin-bottom: 20px
     justify-content: space-between
+    @include until($tablet)
+      flex-direction: column
   &::after
     content: ''
     position: absolute
@@ -20,3 +23,5 @@ $black: #292929
     bottom: -111px
     left: 0
     background: no-repeat url('../img/bg-raspberry.svg')
+    @include until($tablet)
+      display: none

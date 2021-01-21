@@ -1,12 +1,37 @@
 .feedback
-  background: #F8FAF9 no-repeat url('../img/bg-feedback-raspberry.svg') right top rem(22px)
-  padding: rem(42px)
   &__panel
+    padding-top: 5%
+    background: #F8FAF9 no-repeat url('../img/bg-feedback-raspberry.svg') right top rem(22px)
     display: flex
     align-items: center
+    max-height: 23rem // Нужно, чтоб "автор" мог выйти за пределы блока
+    @include until($mobile)
+      padding-top: 3vh
+    @include until($desktop)
+      background-size: 25%
+      flex-direction: column
+      justify-content: flex-start
+      flex-grow: 0
+    @include desktop
+      padding: rem(42px)
+  &__tablist
+    display: flex
+    justify-content: center
+    margin-top: 5vh
+    @include desktop
+      margin-top: 1rem
+  &__avatar-wrap
+    height: 100px
+    width: 100px
+    @include mobile
+      width: 128px
+      height: 128px
+    @include desktop
+      height: auto
+      width: 260px
+      margin-right: rem(40px)
   &__avatar
     max-width: 100%
-    margin-right: rem(40px)
   &__tab
     outline: none
     overflow: hidden
@@ -22,22 +47,29 @@
     display: block
     max-width: 100%
   &__text
-    flex-basis: rem(386px)
+    padding-top: 2vh
+    text-align: center
+    @include desktop
+      text-align: left
+      flex-basis: rem(386px)
   &__header
     font-size: rem(27px)
     line-height: rem(32px)
     font-weight: 700
-    margin-bottom: rem(12px)
+    max-width: 80%
+    margin: 0 auto
+    @include until($mobile)
+      line-height: 1.1
   &__msg
     margin-bottom: rem(25px)
     font-weight: 400
     line-height: rem(22px)
     color: $grey
     margin-top: rem(12px)
+    @include until($mobile)
+      line-height: 1
   &__auth
     font-weight: 500
     line-height: rem(24px)
-  &__tablist
-    display: flex
-    justify-content: center
- 
+  &::after
+    // TODO Add circle 83x83px

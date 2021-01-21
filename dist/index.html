@@ -31,6 +31,133 @@
           </div>
         </div>
       </section>
+      <section class="section-wrapper why-section">
+        <div class="container">
+          <div class="why-section__header">
+            <h2 class="section__title">Почему Chocco?</h2>
+            <div class="section__description section__description--text--center">В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.</div>
+          </div>
+          <div class="why-section__advantages">
+            <div class="cart-adv">
+              <div class="cart-adv__img icon-handsup"></div>
+              <div class="cart-adv__text"> 
+                <h3 class="cart-adv__header">Полезно</h3>
+                <div class="cart-adv__description">Натуральность - ключевое качество нашей продукции. Мы используем только природные ингредиенты.</div>
+              </div>
+            </div>
+            <div class="cart-adv">
+              <div class="cart-adv__img icon-smile"></div>
+              <div class="cart-adv__text">
+                <h3 class="cart-adv__header">Вкусно</h3>
+                <div class="cart-adv__description">Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.</div>
+              </div>
+            </div>
+            <div class="cart-adv">
+              <div class="cart-adv__img icon-arm"></div>
+              <div class="cart-adv__text">
+                <h3 class="cart-adv__header">Питательно</h3>
+                <div class="cart-adv__description">Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-wrapper feedback-section">
+        <div class="container">
+          <h2 class="section__title feedback-section__title">Отзывы</h2>
+          <div class="feedback">
+            <div class="feedback__panel" role="tabpanel" id="feedback-alena">
+              <div class="feedback__avatar-wrap"><img class="feedback__avatar" src="img/img-ava-alena.jpg"/></div>
+              <article class="feedback__text">
+                <h4 class="feedback__header">Лучшие батончики премиум уровня</h4>
+                <p class="feedback__msg">Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.</p>
+                <p class="feedback__auth">Алёна Хмельницкая</p>
+              </article>
+            </div>
+            <div class="feedback__tablist" role="tablist">
+              <button class="feedback__tab feedback__tab--active" role="tab"><img class="feedback__tabava" src="img/img-ava-alena.jpg"/></button>
+              <button class="feedback__tab" role="tab"><img class="feedback__tabava" src="img/img-ava-vadim.jpg"/></button>
+              <button class="feedback__tab" role="tab"><img class="feedback__tabava" src="img/img-ava-mariya.jpg"/></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-wrapper section-form">
+        <div class="container">
+          <h2 class="section__title section-form__title">закажите доставку</h2>
+          <form class="form" action="">
+            <div class="form__group">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="order-name">Имя</label>
+                  <input class="form__input" type="text" name="" id="order-name"/>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="order-phone">Телефон</label>
+                  <input class="form__input" type="text" name="" id="order-phone"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="order-street">Улица</label>
+                  <input class="form__input" type="text" name="" id="order-street"/>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="order-streetnum">Дом</label>
+                  <input class="form__input" type="text" name="" id="order-streetnum"/>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="order-block">Корпус</label>
+                  <input class="form__input" type="text" name="" id="order-block"/>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="order-ap">Квартира</label>
+                  <input class="form__input" type="text" name="" id="order-ap"/>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="order-floor">Этаж</label>
+                  <input class="form__input" type="text" name="" id="order-floor"/>
+                </div>
+              </div>
+            </div>
+            <div class="form__group form__group--ml">
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label" for="order-msg">Комментарий</label>
+                  <textarea class="form__msg form__input" id="order-msg" name="order-msg"></textarea>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group form__group--radio">
+                  <label class="form__label form__label--inline" for="order-payment-1">Потребуется сдача
+                    <input class="form__input form__input--radio" type="radio" name="order-payment" value="change-need" id="order-payment-1"/><span class="cinput cinput__radio"></span>
+                  </label>
+                </div>
+                <div class="form__group form__group--radio">
+                  <label class="form__label form__label--inline" for="order-payment-2">Оплата картой
+                    <input class="form__input form__input--radio" type="radio" name="order-payment" value="cart-pay" id="order-payment-2"/><span class="cinput cinput__radio"> </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label form__label--inline" for="order-callback">Не перезванивать
+                    <input class="form__input form__input--checkbox" type="checkbox" name="order-callback" id="order-callback"/><span class="cinput cinput__checkbox"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="from__row">
+                <div class="form__group">
+                  <button class="btn btn-cta" type="submit">Заказать</button>
+                  <button class="btn btn-link" type="reset">Очистить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
       <div class="fixed-sidenav"><a class="fixed-sidenav__link fixed-sidenav__link--active" href="#" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a>
       </div>
     </div>

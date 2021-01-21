@@ -1,24 +1,50 @@
 .cart-adv
-  flex-basis: rem(276px)
   display: flex
   flex-direction: column
   align-items: center
   position: relative
-  &__img
-    border-radius: 50%
-    background-position: center
-    background-color: $grey-light
-    margin-bottom: rem(20px)
-    width: rem(128px)
-    height: rem(128px)
-  &__header
-    font-size: rem(27px)
-    line-height: ratio(32,27)
-    font-weight: 700
-    margin-bottom: rem(18px)
+  @include until($tablet)
+    flex-direction: row
+  @include desktop
+    // flex-basis: rem(276px)
   &:not(:first-of-type)
-    &::before
+    margin-top: rem(20px)
+    &::before // Delimiters
       content: url('../img/icon-delimiter.svg')
       position: absolute
       left: rem(-65px)
       top: rem(60px)
+      @include until($desktop) // Hide Delimiters
+        display: none
+    
+  &__img
+    border-radius: 50%
+    background-position: center
+    background-color: $grey-light
+    margin-bottom: 0
+    width: 25vw
+    height: 25vw
+    flex: 1 0 auto
+    @include mobile
+      width: rem(128px)
+      height: rem(128px)
+    
+    @include desktop
+      margin-bottom: rem(20px)
+
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-left: .3rem
+    @include until($tablet)
+      text-align: left
+    @include mobile
+      margin-left: 1rem
+
+  &__header
+    font-size: rem(27px)
+    line-height: ratio(32,27)
+    font-weight: 700
+    @include desktop
+      margin-bottom: rem(18px)
