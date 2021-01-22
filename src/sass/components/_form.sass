@@ -32,9 +32,6 @@
       margin-bottom: 1rem
       @include desktop
         margin-bottom: rem(20px)
-   
-
-    
   &__cell
     display: flex
   &__label
@@ -74,6 +71,5 @@
           display: block
     &--checkbox
       @include hide
-      &:checked + .cinput__checkbox
-        &::before
-          display: block
+      &:checked + .cinput__icon
+        display: block

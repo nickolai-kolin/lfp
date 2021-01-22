@@ -2,16 +2,19 @@ section.section.hero-section
   .hero-section__container.container
     //- Header
     header.hero-section__header
-      img.logo(alt='choco logo' src='img/choco-logo.svg')
+      svg.icon.hero-section__logo-icon
+        +use("#logo")
       //- Nav
       nav.nav
         each link in nav
           a.nav__link(href="#")= link
-       
       address.hero-section__phone.phone
-        i.phone__icon.icon-phone
+        svg.icon.hero-section__phone-icon
+          use(xlink:href='../img/sprite.svg#icon-phone')
         a.phone__num(href='tel:+88009039090') 8 800 903 90 90
-      button.btn.nav__burger &#9776;
+      button.btn-icon
+        svg.hero-section__humburger-icon
+          +use("#icon-humberger")
     .hero-section__intent
       .hero-section__img-wrap
         img.hero-section__img(src='img/img-bars.png')
@@ -22,11 +25,14 @@ section.section.hero-section
     //- Advantages
     .hero-section__advantages.advantage-list
       .advantage
-        i.advantage__icon.icon-leafs
+        svg.advantage__icon.icon
+          +use("#icon-leaf")
         span.advantage__description 100% натуральный продукт
       .advantage
-        i.advantage__icon.icon-delivery 
+        svg.advantage__icon.icon
+          +use("#icon-delivery")
         span.advantage__description 3-5 дней доставка по РФ
       .advantage
-        i.advantage__icon.icon-ruler
+        svg.advantage__icon.icon
+          +use("#icon-ruler")
         span.advantage__description Не портит фигуру

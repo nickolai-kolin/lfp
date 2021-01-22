@@ -1,17 +1,25 @@
 section.map-section
   .map-section__img
-    
   .map-section__contacts
     .contacts-section
       .contacts-section__content.container
         .contacts-section__address
           address.location Tokyo, Robotics street 12, ap 22
-          address.phone
-            i.phone__icon.icon-phone.phone__icon--color--green
+          address.phone.contacts-section__phone
+            svg.phone__icon.phone__icon--fill--green
+              +use("#icon-phone")       
             a.phone__num.phone__num--color--green(href='tel:+88009039090') 8 800 903 90 90
         .contacts-section__social
           .soc-icons-list
-            a.soc-icons-list__item(href="") 1
-            a.soc-icons-list__item(href="") 2
-            a.soc-icons-list__item(href="") 3
-            a.soc-icons-list__item(href="") 4
+            a.soc-icons-list__item(href="#")
+              svg.soc-icons-list__item-icon
+                +use('#icon-vk')
+            a.soc-icons-list__item(href="#")
+              svg.soc-icons-list__item-icon
+                +use('#icon-fb')
+            a.soc-icons-list__item(href="#")
+              svg.soc-icons-list__item-icon
+                +use('#icon-linkedin')
+            a.soc-icons-list__item(href="#")
+              svg.soc-icons-list__item-icon
+                +use('#icon-twitter')

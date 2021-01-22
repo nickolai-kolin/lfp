@@ -10,15 +10,18 @@
     margin-top: 0
   &:not(:first-of-type)
     margin-top: rem(20px)
+    @include desktop
+      margin-top: 0
     &::before // Delimiters
       content: url('../img/icon-delimiter.svg')
       position: absolute
-      left: rem(-65px)
+      left: rem(-30px)
       top: rem(60px)
       @include until($desktop) // Hide Delimiters
         display: none
     
   &__img
+    padding: 5px
     border-radius: 50%
     background-position: center
     background-color: $grey-light
@@ -27,6 +30,7 @@
     height: 25vw
     flex: 1 0 auto
     @include mobile
+      padding: 30px
       width: rem(128px)
       height: rem(128px)
     
@@ -49,3 +53,8 @@
     font-weight: 700
     @include desktop
       margin-bottom: rem(18px)
+
+  &__icon
+    fill: #000
+    width: 64px
+    height: 64px

@@ -7,6 +7,11 @@
   position: absolute
   left: 0
   top: -2px
+  &__icon
+    fill: $green
+    width: 10px
+    height: 8px
+    display: none
   &__radio
     border-radius: 50%
     &:before
@@ -23,17 +28,17 @@
     &:before
       display: none
       position: absolute
-      border-radius: 2px
-      border: 4px solid $green
-      border-left: none
-      border-top: none 
-      content: ""
+      // border-radius: 2px
+      // border: 4px solid $green
+      // border-left: none
+      // border-top: none 
+      content: url("../img/sprite.svg#icon-checkmark")
       width: 3px
       height: 8px
       // background-color: $green
-      top: 6px
-      left: 10px
-      transform: rotateZ(45deg)
+      // top: 6px
+      // left: 10px
+      // transform: rotateZ(45deg)
 
 
   // &__checkbox
