@@ -6,6 +6,8 @@
   align-items: center
   display: flex
   text-align: center
+  @include until($tablet)
+    background: none
   &__header
     margin-bottom: 1rem
     @include desktop

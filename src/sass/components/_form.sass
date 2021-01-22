@@ -21,23 +21,18 @@
       @include desktop
         margin-top: 0
     &--text--center
-      text-align: center
-      @include desktop
-        text-align: left
-    &--radio
       display: flex
-      align-items: center
-      position: relative
+      justify-content: center
+      @include tablet
+        justify-content: flex-start 
   &__row
     display: flex
-    align-items: center
+    justify-content: center
     &:not(:last-of-type)
       margin-bottom: 1rem
       @include desktop
         margin-bottom: rem(20px)
-    &--tablet-alignCenter
-      @include tablet
-        align-items: flex-start
+   
 
     
   &__cell

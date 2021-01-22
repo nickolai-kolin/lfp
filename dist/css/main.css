@@ -277,8 +277,7 @@ button {
   @media screen and (max-width: 479px) {
     .btn {
       padding: 0.6875rem 1.3125rem;
-      font-weight: 400;
-      text-transform: capitalize; } }
+      font-weight: 400; } }
   .btn-link {
     padding: 1.3125rem 2.5625rem;
     background: none; }
@@ -314,18 +313,18 @@ button {
     .nav {
       display: flex; } }
 
-.phone {
-  display: none; }
-  .phone__icon {
-    width: 14px;
-    height: 14px;
-    display: inline-block;
-    margin-right: 6px; }
-  .phone__num {
-    font-size: 22px; }
-  @media screen and (min-width: 992px) {
-    .phone {
-      display: block; } }
+.phone__icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 6px; }
+  .phone__icon--color--green {
+    color: #497870; }
+
+.phone__num {
+  font-size: 22px; }
+  .phone__num--color--green {
+    color: #497870; }
 
 .advantage {
   display: flex;
@@ -352,6 +351,10 @@ button {
     .section__title--text--center {
       text-align: center; }
     @media screen and (max-width: 767px) {
+      .section__title {
+        font-size: 2.5rem;
+        line-height: 0.9; } }
+    @media screen and (max-width: 479px) {
       .section__title {
         font-size: 2rem; } }
   .section__description {
@@ -591,25 +594,19 @@ button {
         .form__group--mt {
           margin-top: 0; } }
     .form__group--text--center {
-      text-align: center; }
-      @media screen and (min-width: 992px) {
-        .form__group--text--center {
-          text-align: left; } }
-    .form__group--radio {
       display: flex;
-      align-items: center;
-      position: relative; }
+      justify-content: center; }
+      @media screen and (min-width: 768px) {
+        .form__group--text--center {
+          justify-content: flex-start; } }
   .form__row {
     display: flex;
-    align-items: center; }
+    justify-content: center; }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
         .form__row:not(:last-of-type) {
           margin-bottom: 1.25rem; } }
-    @media screen and (min-width: 768px) {
-      .form__row--tablet-alignCenter {
-        align-items: flex-start; } }
   .form__cell {
     display: flex; }
   .form__label {
@@ -684,25 +681,19 @@ button {
         .form__group--mt {
           margin-top: 0; } }
     .form__group--text--center {
-      text-align: center; }
-      @media screen and (min-width: 992px) {
-        .form__group--text--center {
-          text-align: left; } }
-    .form__group--radio {
       display: flex;
-      align-items: center;
-      position: relative; }
+      justify-content: center; }
+      @media screen and (min-width: 768px) {
+        .form__group--text--center {
+          justify-content: flex-start; } }
   .form__row {
     display: flex;
-    align-items: center; }
+    justify-content: center; }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
         .form__row:not(:last-of-type) {
           margin-bottom: 1.25rem; } }
-    @media screen and (min-width: 768px) {
-      .form__row--tablet-alignCenter {
-        align-items: flex-start; } }
   .form__cell {
     display: flex; }
   .form__label {
@@ -785,6 +776,38 @@ button {
     left: 10px;
     transform: rotateZ(45deg); }
 
+.location {
+  font-style: normal; }
+
+.soc-icons-list__item {
+  display: inline-block;
+  width: 20px;
+  height: 20px; }
+
+.contacts-section__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .contacts-section__content {
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.map-section {
+  height: 100vh;
+  position: relative; }
+  .map-section__img {
+    background: no-repeat url("../img/img-holder-map.jpg") center/cover;
+    height: 100%;
+    height: 100%; }
+  .map-section__contacts {
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+
 .hero-section {
   background: #61C4D9 no-repeat url("../img/bg-pattern-leaf.svg") top 10% right/70%;
   color: #FFFFFF;
@@ -796,6 +819,11 @@ button {
     .hero-section {
       background-size: auto;
       background-position: right bottom; } }
+  .hero-section__phone {
+    display: none; }
+    @media screen and (min-width: 992px) {
+      .hero-section__phone {
+        display: block; } }
   .hero-section__container {
     display: flex;
     flex-direction: column;
@@ -937,6 +965,9 @@ button {
   align-items: center;
   display: flex;
   text-align: center; }
+  @media screen and (max-width: 767px) {
+    .why-section {
+      background: none; } }
   .why-section__header {
     margin-bottom: 1rem; }
     @media screen and (min-width: 992px) {
@@ -972,6 +1003,7 @@ button {
       .section-form__title {
         font-size: 1.2rem;
         margin-bottom: 0.5rem; } }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 480px) {
       .section-form__title {
+        margin-bottom: 1.875rem;
         margin-bottom: 3.8125rem; } }
