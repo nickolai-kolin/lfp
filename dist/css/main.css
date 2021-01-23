@@ -670,7 +670,7 @@ button {
       position: absolute;
       left: -9999px;
       top: 0; }
-      .form__input--checkbox:checked + .cinput__icon {
+      .form__input--checkbox:checked + .cinput__checkbox::before {
         display: block; }
 
 .form {
@@ -757,7 +757,7 @@ button {
       position: absolute;
       left: -9999px;
       top: 0; }
-      .form__input--checkbox:checked + .cinput__icon {
+      .form__input--checkbox:checked + .cinput__checkbox::before {
         display: block; }
 
 .cinput {
@@ -789,9 +789,14 @@ button {
   .cinput__checkbox:before {
     display: none;
     position: absolute;
-    content: url("../img/sprite.svg#icon-checkmark");
-    width: 3px;
-    height: 8px; }
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: blue no-repeat url(../img/sprite.svg#icon-vk);
+    background-size: cover;
+    fill: #497870;
+    top: 8px;
+    left: 8px; }
 
 .location {
   font-style: normal; }

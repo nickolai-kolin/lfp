@@ -65,11 +65,12 @@
     &:focus
       outline: rem(3px) solid $green-light
     &--radio
-      @include hide
+      @include hide 
       &:checked + .cinput__radio
         &::before
           display: block
     &--checkbox
       @include hide
-      &:checked + .cinput__icon
-        display: block
+      &:checked + .cinput__checkbox
+        &::before
+          display: block
