@@ -267,7 +267,8 @@ button {
   border-radius: 6.25rem;
   text-transform: uppercase;
   background-color: #FFFFFF;
-  color: #497870; }
+  color: #497870;
+  outline: none; }
   .btn-icon {
     width: 1.625rem;
     height: 1.5rem;
@@ -289,7 +290,9 @@ button {
       font-weight: 400; } }
   .btn-link {
     padding: 1.3125rem 2.5625rem;
-    background: none; }
+    background: none;
+    font-weight: normal;
+    text-transform: capitalize; }
     .btn-link:hover {
       background: none;
       color: #2E4E3F; }
@@ -622,6 +625,9 @@ button {
           justify-content: flex-start; } }
   .form__row {
     display: flex; }
+    @media screen and (max-width: 767px) {
+      .form__row {
+        justify-content: center; } }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
@@ -661,18 +667,6 @@ button {
         padding: 1.125rem 0.75rem 1.25rem; } }
     .form__input:focus {
       outline: 0.1875rem solid #DEE2BD; }
-    .form__input--radio {
-      position: absolute;
-      left: -9999px;
-      top: 0; }
-      .form__input--radio:checked + .cinput__radio::before {
-        display: block; }
-    .form__input--checkbox {
-      position: absolute;
-      left: -9999px;
-      top: 0; }
-      .form__input--checkbox:checked + .cinput__checkbox::before {
-        display: block; }
 
 .form {
   display: flex;
@@ -710,6 +704,9 @@ button {
           justify-content: flex-start; } }
   .form__row {
     display: flex; }
+    @media screen and (max-width: 767px) {
+      .form__row {
+        justify-content: center; } }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
@@ -749,18 +746,6 @@ button {
         padding: 1.125rem 0.75rem 1.25rem; } }
     .form__input:focus {
       outline: 0.1875rem solid #DEE2BD; }
-    .form__input--radio {
-      position: absolute;
-      left: -9999px;
-      top: 0; }
-      .form__input--radio:checked + .cinput__radio::before {
-        display: block; }
-    .form__input--checkbox {
-      position: absolute;
-      left: -9999px;
-      top: 0; }
-      .form__input--checkbox:checked + .cinput__checkbox::before {
-        display: block; }
 
 .cinput {
   display: block;

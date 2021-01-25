@@ -30,8 +30,11 @@
         justify-content: flex-start 
   &__row
     display: flex
+    @include until($tablet)
+        justify-content: center
     &:not(:last-of-type)
       margin-bottom: 1rem
+      
       @include desktop
         margin-bottom: rem(20px)
   &__cell
@@ -66,13 +69,13 @@
       padding: rem(18px) rem(12px) rem(20px)
     &:focus
       outline: rem(3px) solid $green-light
-    &--radio
-      @include hide 
-      &:checked + .cinput__radio
-        &::before
-          display: block
-    &--checkbox
-      @include hide
-      &:checked + .cinput__checkbox
-        &::before
-          display: block
+    // &--radio
+    //   @include hide 
+    //   &:checked + .cinput__radio
+    //     &::before
+    //       display: block
+    // &--checkbox
+    //   @include hide
+    //   &:checked + .cinput__checkbox
+    //     &::before
+    //       display: block
