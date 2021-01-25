@@ -165,23 +165,17 @@
                 </div>
               </div>
               <div class="form__row">
-                <div class="form__group form__group--radio form__group--text--center">
-                  <label class="form__label form__label--inline" for="order-payment-1">Потребуется сдача
-                    <input class="form__input form__input--radio" type="radio" name="order-payment" value="change-need" id="order-payment-1"/><span class="cinput cinput__radio"></span>
-                  </label>
-                </div>
-                <div class="form__group form__group--radio form__group--text--center">
-                  <label class="form__label form__label--inline" for="order-payment-2">Оплата картой
-                    <input class="form__input form__input--radio" type="radio" name="order-payment" value="cart-pay" id="order-payment-2"/><span class="cinput cinput__radio"> </span>
-                  </label>
-                </div>
+                <label class="form__field fake-input" for="order-payment-1">
+                  <input class="fake-input__input fake-input__input--hide" type="radio" name="order-payment" value="change-need" id="order-payment-1"/><span class="fake-input__radio"></span><span class="fake-input__label-text">Потребуется сдача</span>
+                </label>
+                <label class="form__field fake-input" for="order-payment-2">
+                  <input class="fake-input__input fake-input__input--hide" type="radio" name="order-payment" value="card" id="order-payment-2"/><span class="fake-input__radio"></span><span class="fake-input__label-text">Оплата картой</span>
+                </label>
               </div>
               <div class="form__row">
-                <div class="form__group form__group--checkbox form__group--text--center">
-                  <label class="form__label form__label--inline" for="order-callback">Не перезванивать
-                    <input class="form__input form__input--checkbox" type="checkbox" name="order-callback" id="order-callback"/><span class="cinput cinput__checkbox"></span>
-                  </label>
-                </div>
+                <label class="form__field fake-input" for="order-callback"> 
+                  <input class="fake-input__input fake-input__input--hide" type="checkbox" name="order-callback" id="order-callback"/><span class="fake-input__checkbox"></span><span class="fake-input__label-text">Не перезванивать</span>
+                </label>
               </div>
               <div class="from__row">
                 <div class="form__group form__group--text--center">

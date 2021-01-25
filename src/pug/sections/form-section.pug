@@ -33,22 +33,21 @@
             label.form__label(for="order-msg") Комментарий
             textarea.form__msg.form__input#order-msg(name="order-msg")
         .form__row
-          .form__group.form__group--radio.form__group--text--center
-            label.form__label.form__label--inline(for="order-payment-1") Потребуется сдача
-              input.form__input.form__input--radio(type="radio" name="order-payment" value='change-need' id='order-payment-1')
-              span.cinput.cinput__radio
-          .form__group.form__group--radio.form__group--text--center
-            label.form__label.form__label--inline(for="order-payment-2") Оплата картой
-              input.form__input.form__input--radio(type="radio" name="order-payment" value='cart-pay' id='order-payment-2')
-              span.cinput.cinput__radio 
+            label.form__field.fake-input(for="order-payment-1")
+              input.fake-input__input.fake-input__input--hide(type='radio', name='order-payment', value='change-need', id='order-payment-1')
+              span.fake-input__radio
+              span.fake-input__label-text Потребуется сдача
+            label.form__field.fake-input(for="order-payment-2")
+              input.fake-input__input.fake-input__input--hide(type='radio', name='order-payment', value='card', id='order-payment-2')
+              span.fake-input__radio
+              span.fake-input__label-text Оплата картой
+        //- Input CallBack
         .form__row
-          .form__group.form__group--checkbox.form__group--text--center
-            label.form__label.form__label--inline(for="order-callback") Не перезванивать
-              input.form__input.form__input--checkbox(type="checkbox" name="order-callback" id='order-callback')
-              span.cinput.cinput__checkbox
-                //- svg.cinput__icon
-                //-   +use("") 
-                  //- // TODO Завершить отображение в svg icon
+          
+            label.form__field.fake-input(for="order-callback") 
+              input.fake-input__input.fake-input__input--hide(type="checkbox" name="order-callback" id='order-callback')
+              span.fake-input__checkbox
+              span.fake-input__label-text Не перезванивать
                   
         .from__row
           .form__group.form__group--text--center

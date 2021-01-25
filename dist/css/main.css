@@ -597,6 +597,8 @@ button {
   @media screen and (min-width: 992px) {
     .form {
       flex-direction: row; } }
+  .form__field:not(:last-of-type) {
+    margin-right: 1.4375rem; }
   .form__group {
     flex: 1;
     margin-left: 0.75rem; }
@@ -619,8 +621,7 @@ button {
         .form__group--text--center {
           justify-content: flex-start; } }
   .form__row {
-    display: flex;
-    justify-content: center; }
+    display: flex; }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
@@ -684,6 +685,8 @@ button {
   @media screen and (min-width: 992px) {
     .form {
       flex-direction: row; } }
+  .form__field:not(:last-of-type) {
+    margin-right: 1.4375rem; }
   .form__group {
     flex: 1;
     margin-left: 0.75rem; }
@@ -706,8 +709,7 @@ button {
         .form__group--text--center {
           justify-content: flex-start; } }
   .form__row {
-    display: flex;
-    justify-content: center; }
+    display: flex; }
     .form__row:not(:last-of-type) {
       margin-bottom: 1rem; }
       @media screen and (min-width: 992px) {
@@ -830,6 +832,61 @@ button {
   @media screen and (min-width: 768px) {
     .contacts-section__phone {
       text-align: left; } }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+
+.fake-input {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative; }
+  .fake-input__input--hide {
+    position: absolute;
+    left: -9999px;
+    top: 0; }
+  .fake-input__input:checked + .fake-input__radio::after,
+  .fake-input__input:checked + .fake-input__checkbox::after {
+    display: block; }
+  .fake-input__radio, .fake-input__checkbox {
+    background-color: #fff;
+    width: 1.5625rem;
+    height: 1.5625rem;
+    margin-right: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .fake-input__radio {
+    border-radius: 50%; }
+    .fake-input__radio::after {
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      background-color: #497870;
+      content: '';
+      display: none; }
+  .fake-input__checkbox {
+    border-radius: 0.16 rem; }
+    .fake-input__checkbox::after {
+      content: '';
+      width: 50%;
+      height: 50%;
+      background: no-repeat url(../img/icon-checkmark.svg) bottom;
+      background-size: contain;
+      display: none; }
+  .fake-input__label-text {
+    line-height: 1; }
+  .fake-input__mark--circle {
+    border-radius: 50%;
+    background-color: #497870; }
+  .fake-input__mark--check {
+    background: none; }
+
+.input--hide {
+  position: absolute;
+  left: -9999px;
+  top: 0; }
 
 .map-section {
   height: 100vh;

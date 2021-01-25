@@ -1,0 +1,19 @@
+.fake-input {
+  display: flex;
+  align-items: center; }
+  .fake-input__radio, .fake-input__checkbox {
+    background-color: #fff;
+    width: rem(25px);
+    height: rem(25px);
+    margin-right: rem(10px); }
+  .fake-input__radio {
+    border-radius: 50%; }
+    .fake-input__radio::after {
+      content: "";
+      width: rem(13px);
+      height: rem(13px);
+      border-radius: 50%; }
+  .fake-input--checkbox {
+    border-radius: ratio(4, 25) rem; }
+  .fake-input__label-text {
+    line-height: 1; }

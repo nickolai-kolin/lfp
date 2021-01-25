@@ -7,6 +7,9 @@
     margin: 0 auto
   @include desktop
     flex-direction: row
+  &__field
+    &:not(:last-of-type)
+      margin-right: rem(23px)
   &__group
     flex: 1
     margin-left: rem(12px)
@@ -27,7 +30,6 @@
         justify-content: flex-start 
   &__row
     display: flex
-    justify-content: center
     &:not(:last-of-type)
       margin-bottom: 1rem
       @include desktop

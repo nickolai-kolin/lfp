@@ -1,0 +1,60 @@
+.fake-input
+  display: flex
+  align-items: center
+  cursor: pointer
+  position: relative
+  // Fields
+  &__input
+    &--hide
+      position: absolute
+      left: -9999px
+      top: 0
+    &:checked + .fake-input__radio::after, 
+    &:checked + .fake-input__checkbox::after
+      display: block
+      
+  &__radio, &__checkbox
+    background-color: #fff
+    width: rem(25px)
+    height: rem(25px)
+    margin-right: rem(10px)
+    // Controling Marks
+    display: flex
+    justify-content: center
+    align-items: center
+  &__radio
+    border-radius: 50%
+    &::after
+      width: 50%
+      height: 50%
+      border-radius: 50%
+      background-color: $green
+      content: ''
+      display: none
+  &__checkbox
+    border-radius: ratio(4,25)rem
+    &::after
+      content: ''
+      width: 50%
+      height: 50%
+      background: no-repeat url(../img/icon-checkmark.svg) bottom
+      background-size: contain
+      display: none
+
+  &__label-text
+    line-height: 1
+
+  // Marks
+
+  &__mark
+    
+
+  &__mark--circle
+    border-radius: 50%
+    background-color: $green
+
+  &__mark--check
+      background: none
+
+
+
