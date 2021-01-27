@@ -1,0 +1,43 @@
+.product-slider-section.section
+  .container.slider
+    button.slider__nav.slider__nav--prev
+      svg.slider__nav-icon
+        +use("#icon-arrow--left")
+    button.slider__nav.slider__nav--next
+      svg.slider__nav-icon
+        +use("#icon-arrow--right")
+    .slider__item.product
+      .slider__img
+        .slider__img-bg
+            img.product__img(src="img/img-bars--white.png")
+      .product__content-wrap.slider__content-wrap
+        .product__ingridients.dropdown
+          .button.product__ingridients-trigger.dropdown__trigger
+            svg.product__ingridients-trigger-icon
+              +use('#icon-choco')
+            | Состав
+          ul.dropdown__content.dropdown__content--right.product__ingridients-list
+            each ingridient in ingridients
+              li.product__ingridients-item
+                span.product__ingridients-text
+                  svg.product__ingridients-icon
+                    +use("#icon-"+ingridient.icon)
+                  | #{ingridient.text}
+                span.product__ingridients-weight= ingridient.weight
+            
+
+
+        h3.product__title Батончик “Гранола виноград”
+        .product__description Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+        .product__features-wrap
+          .product__feature
+            .product__feature-text Калорийность
+            .product__feature-quantity 110 ккал
+          .product__feature
+            .product__feature-text Вес
+            .product__feature-quantity 95 грам
+        .slider__row
+          span.product__price.product__price--size--slider 140 $
+          button.btn.btn--green Заказать
+
+

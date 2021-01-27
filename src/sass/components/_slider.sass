@@ -1,0 +1,81 @@
+.slider
+  position: relative
+  padding-left: 40px
+  padding-right: 40px
+  @include until($desktop)
+    text-align: center
+    max-width: 68%
+  @include until($tablet)
+    max-width: 100%
+    padding: 0 10px
+  &__row
+    display: flex
+    @include until($desktop)
+      justify-content: center
+  &__product-price
+  &__item
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @include until($desktop)
+      flex-direction: column
+      align-items: center
+
+  &__content-wrap
+    flex: 1
+  &__img
+    flex: 1
+    margin-right: 2%
+    position: relative
+    @include until($desktop)
+      margin-bottom: rem(54px)
+      margin-right: 0
+    @include until($tablet)
+      margin-bottom: rem(30px)
+      max-width: 65%
+    &::before
+      content: url('../img/bg-leaf-blured-slider.png')
+      position: absolute
+      left: -15%
+      top: 30%
+      @include until($tablet)
+        transform: scale(.7)
+        left: -25%
+        top: 30%
+    &::after
+      content: url('../img/bg-leaf-slider.png')
+      position: absolute
+      bottom: -8%
+      right: 4%
+      display: block
+      object-fit: cover
+      @include until($tablet)
+        transform: scale(.7)
+        bottom: -15%
+        right: -24%
+
+    @include until($desktop)
+  &__img-bg
+    max-width: calc(363px + 25px)
+    background: no-repeat url('../img/bg-ellipse.svg') left bottom / contain
+    padding-right: 25px
+    padding-bottom: 6px
+  &__nav
+    position: absolute
+    top: 55%
+    @include until($desktop)
+      top: 30%
+    @include until($tablet)
+      top: 15%
+    
+    &--prev
+      left: 0
+    &--next
+      right: 0
+    
+  &__nav-icon
+    fill: none
+    stroke: $black
+    stroke-width: 2
+    width: rem(15px)
+    height: rem(29px)

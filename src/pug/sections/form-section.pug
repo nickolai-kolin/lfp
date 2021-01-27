@@ -32,6 +32,9 @@
           .form__group
             label.form__label(for="order-msg") Комментарий
             textarea.form__msg.form__input#order-msg(name="order-msg")
+
+
+
         .form__row
             label.form__field.fake-input(for="order-payment-1")
               input.fake-input__input.fake-input__input--hide(type='radio', name='order-payment', value='change-need', id='order-payment-1')
@@ -47,9 +50,8 @@
               input.fake-input__input.fake-input__input--hide(type="checkbox" name="order-callback" id='order-callback')
               span.fake-input__checkbox
               span.fake-input__label-text Не перезванивать
-                  
         .form__row
-          button.btn.btn--inversed(type='submit') Заказать
-          button.btn.btn-link(type='reset') Очистить
+          button.btn.btn--green(type='submit') Заказать
+          button.btn.btn--transparent(type='reset') Очистить
 
 

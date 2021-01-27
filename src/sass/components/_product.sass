@@ -1,0 +1,85 @@
+.product
+  &__img
+  &__content-wrap
+  &__title
+    text-transform: uppercase
+    font-size: rem(36px)
+    margin-bottom: rem(24px)
+    @include until($desktop)
+      font-size: rem(30px)
+      margin-bottom: rem(13px)
+    @include until($mobile) 
+      font-size: rem(20px)
+  &__description
+    color: $grey
+    margin-bottom: rem(24px)
+  &__features-wrap
+    display: flex
+    margin-bottom: rem(24px)
+    @include until($desktop)
+      justify-content: center
+  &__feature
+    &:not(:last-of-type)
+      margin-right: rem(44px)
+  &__feature-text
+  &__feature-quantity
+    font-weight: 700
+  &__price
+    margin-right: rem(50px)
+    &--size--slider
+      font-size: rem(60px)
+      font-weight: 300
+      line-height: 1
+  &__ingridients
+    display: inline-flex
+    margin-bottom: rem(23px)
+    &:hover > .product__ingridients-list
+        display: block
+    &-icon
+      fill: $white
+      width: rem(46px)
+      height: rem(46px)
+    &-trigger
+      padding: rem(12px) rem(23px)
+      background-color: $blue-lighten
+      color: $white
+      display: inline-flex
+      flex-direction: column
+      border-radius: rem(4px)
+      &-icon
+        width: rem(46px)
+        height: rem(46px)
+        fill: $white
+    &-list
+      width: rem(273px)
+      padding: rem(30px)
+      box-shadow: 4px 4px 40px rgba(0, 0, 0, .06)
+      background: rgba(255, 255, 255, 0.9)
+      font-size: 1rem
+      font-weight: 500
+      border-radius: rem(4px)
+      color: $black
+    &-item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &:not(:last-of-type)
+        margin-bottom: rem(24px)
+      
+    &-icon
+      width: 2rem
+      height: 2rem
+      margin-right: 1rem
+      fill: $black
+    &-text
+      display: flex
+      align-items: center
+    &-weight
+      white-space: nowrap
+    @include until($desktop)
+      display: none
+
+
+
+
+  
