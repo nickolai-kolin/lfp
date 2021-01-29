@@ -1,20 +1,43 @@
 .nav
-  display: none
+  position: relative
+  @include until($desktop)
+    z-index: 10
+    background-color: rgba(0,0,0, 0.9)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-evenly
+    overflow: hidden
+    transition: height .4s
+    @include mobile
+      justify-content: flex-start
+
+  &--opened
+    height: 100%
+    @include mobile
+      padding-top: 14vh
   justify-content: space-between
   &__link
+    font-size: rem(36px)
     font-weight: 400
-    line-height: rem(30px)
-    &:not(:last-of-type)
-      margin-right: rem(27px)
-      &:hover
-        color: $green
-  &__burger
-    font-size: 2rem
-    padding: 6px
-    background: transparent
-    color: $white
+    @include mobile
+      line-height: 2
+    @include desktop
+      font-size: initial
+      line-height: rem(30px)
+      &:not(:last-of-type)
+        margin-right: rem(27px)
+    &:hover
+      color: $green
+  &__close
+    position: absolute
+    right: 4%
+    top: 4%
     @include desktop
       display: none
-    // 
-  @include desktop
-    display: flex
+

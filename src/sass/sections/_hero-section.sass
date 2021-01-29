@@ -80,7 +80,16 @@
       margin: 0 auto 3vh
     @include desktop
       width: 100%
-    
+  &__burger
+    display: block
+    @include desktop
+      display: none
+  &__nav
+    @include desktop
+      position: static
+      display: flex
+
+        
   &__img
     &-wrap
       width: 53%
