@@ -7,7 +7,7 @@
     "sass": "node-sass src/sass/main.sass -o dist/css/",
     "sass:watch": "node-sass src/sass/main.sass -wo dist/css/",
     "pug": "pug src/pug/index.pug --out dist/ --watch --pretty",
-    "server": "live-server dist/ --port=8000 --browser='Google Chrome' --watch",
+    "server": "live-server dist/ --port=8000 --watch --no-browser" , 
     "watch": "npm run sass & npm run sass:watch &npm run pug & npm run server"
   },
   "repository": {
@@ -23,5 +23,10 @@
   "homepage": "https://github.com/nickolai-kolin/lfp#readme",
   "dependencies": {
     "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^4.1.3"
   }
 }

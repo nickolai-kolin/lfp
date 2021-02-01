@@ -6,7 +6,7 @@ section.section.hero-section
         +use("#logo")
       //- Nav
       nav#hero-nav.nav.hero-section__nav
-        button.btn-close.nav__close
+        button.btn-close.nav__close(data-close='#hero-nav')
           svg.btn-close__icon
             +use("#icon-close")
         each link in nav
@@ -15,7 +15,7 @@ section.section.hero-section
         svg.icon.hero-section__phone-icon
           use(xlink:href='img/sprite.svg#icon-phone')
         a.phone__num(href='tel:+88009039090') 8 800 903 90 90
-      button.btn-burger.hero-section__burger.nav__open
+      button#burger.btn-burger.hero-section__burger.nav__open(data-open='#hero-nav')
         svg.btn-burger__icon
           +use("#icon-burger")
         
