@@ -15,27 +15,37 @@ function main() {
     //   });
     // });
       
-    // HIDE FULL HEIGHT MENU
-    let closeBtnClickHanlder = ev => {
-      `Close fullheight hero nav by removing class`
-      let navSelector = $(ev.currentTarget).attr('data-close');
-      $(navSelector).removeClass("nav--opened");
-    }
-    // Add Event Listener
-    $(".btn-close").on('click', closeBtnClickHanlder)
-    
-    // OPEN FULL HEIGHT MENU
-    let burgerButtonClickHandler = ev => {
-      ` Open Full Height Menu by adding class`
-      let navSelector = $(ev.currentTarget).attr('data-open');
-      $(navSelector).addClass("nav--opened");
-    }
+    // HIDE FULL HEIGHT MENU 
+    const heroNavSel = '#hero-nav';
+    const toogleHeroNav = () => {
+      const heroNav = $(heroNavSel);
+      const isFound = heroNav.length > 0
+      const err = () => console.error(`Error: '${heroNavSel}' not found`);
+      isFound ? heroNav.toggleClass("nav--opened") : err();
+    } 
+    $(`[data-toggle-el-id='${heroNavSel}']`).on('click', toogleHeroNav);
 
-    // Add Event Listener
-    $("#burger").on('click', burgerButtonClickHandler);
+    // $(".btn-close").on('click', toogleHeroNav)
+    // $("#burger").on('click', toogleHeroNav);
+
+
+
+    // Form
+    let orderForm = $("#order-form");
+    let orderFormSubmitHandler = ev => {
+      ev.preventDefault();
+      let name = orderForm.find("#order-name").val();
+      let phoneNum = orderForm.find("#order-phone").val();
+      let street = orderForm.find("#order-street").val();
+      let paymentMethod = orderForm.find('input[name=order-payment]:checked').val();
+      let needCallBack = orderForm.find('input[name=order-callback]').is(':checked');
+      console.log(needCallBack);
+    };
+
+    orderForm.on('submit', orderFormSubmitHandler)
 
 }
 
 // Run main once DOMContentLoaded event fired
-$.when($.ready).then(main());
-// $(main());
+$.when($.ready)
+  .then(main());
