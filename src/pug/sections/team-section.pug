@@ -1,0 +1,11 @@
+section.section.team-section
+  .container
+    h2.section__title.section__title--text--center.team-section__title Команда
+    .team#team
+      .team__inner
+        each person in team
+          .team__member(data-accordion-name="team-member")
+            img.team__member-ava(src='img/img-ava-'+person.avatar_slug+'.jpg' data-accordion-content)
+            button.team__member-name(data-accordion-trigger)= person.name
+            .team__member-role(data-accordion-content)= person.role
+            .team__member-duty(data-accordion-content)= person.duty

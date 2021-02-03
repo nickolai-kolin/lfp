@@ -1,0 +1,7 @@
+mixin employee(name, role, duty, avatar_slug) {
+  .employee
+    .employee__name= name
+    img.employee__ava(src='img/img-ava-'+avatar_slug+'.jpg')
+    .employee__role= role
+    .employee__duty= duty
+}

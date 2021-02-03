@@ -1098,6 +1098,87 @@ li {
     .product__ingridients {
       display: none; } }
 
+.team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; }
+  .team__inner {
+    display: flex;
+    flex-direction: column;
+    width: 74%; }
+    @media screen and (min-width: 768px) {
+      .team__inner {
+        width: 38%; } }
+    @media screen and (min-width: 992px) {
+      .team__inner {
+        flex-direction: row;
+        margin-left: -20px;
+        width: 100%; } }
+  .team__member {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (min-width: 992px) {
+      .team__member {
+        margin-left: 20px; } }
+    .team__member-ava {
+      margin-bottom: 1.3125rem;
+      transition: all .4s; }
+      @media screen and (max-width: 767px) {
+        .team__member-ava {
+          max-width: 54%; } }
+      @media screen and (max-width: 991px) {
+        .team__member-ava {
+          height: 0;
+          overflow: hidden; } }
+    .team__member-name {
+      font-weight: 700;
+      font-size: 1.3125rem;
+      margin-bottom: 0.5rem;
+      margin-right: 0.25rem;
+      position: relative; }
+      @media screen and (max-width: 991px) {
+        .team__member-name {
+          order: -10; } }
+      .team__member-name::after {
+        content: "";
+        width: 9px;
+        height: 9px;
+        background: no-repeat url("../img/icon-caretdown.svg") center;
+        display: block;
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: all .3s; }
+    .team__member-name-icon {
+      width: 9px;
+      height: 9px;
+      fill: #497870; }
+    .team__member-role {
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+      height: 0;
+      overflow: hidden; }
+    .team__member-duty {
+      font-weight: 300;
+      height: 0;
+      overflow: hidden;
+      transition: all .3s; }
+    .team__member--active .team__member-role {
+      height: auto; }
+    .team__member--active .team__member-duty {
+      height: auto; }
+    @media screen and (max-width: 991px) {
+      .team__member--active .team__member-ava {
+        height: auto; } }
+    .team__member--active .team__member-name::after {
+      transform: translateY(-50%) rotate(180deg); }
+
 .map-section {
   height: 100vh;
   position: relative; }
@@ -1339,3 +1420,10 @@ li {
   display: flex;
   align-items: center;
   background-color: #F8FAF9; }
+
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .team-section__title {
+    margin-bottom: 3.3125rem; }
