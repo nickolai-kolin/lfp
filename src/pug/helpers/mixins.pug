@@ -8,3 +8,35 @@ mixin fake-input(type, label_text, label_for, input_id=label_for, input_name=lab
   span.fake-input__label-text= label_text
   //- Hiding real input
   input(type=type, id=input_id).input.input--hide
+
+mixin prod(product)
+  .slider__item.product
+    .slider__img
+      .slider__img-bg
+          img.product__img(src="img/"+product.product_img_slug)
+    .product__content-wrap.slider__content-wrap
+      .product__ingridients.dropdown
+        .button.product__ingridients-trigger.dropdown__trigger
+          svg.product__ingridients-trigger-icon
+            +use('#icon-choco')
+          | Состав
+        ul.dropdown__content.dropdown__content--right.product__ingridients-list
+          each ingridient in product.ingridients
+            li.product__ingridients-item
+              span.product__ingridients-text
+                svg.product__ingridients-icon
+                  +use("#icon-"+ingridient.icon)
+                | #{ingridient.text}
+              span.product__ingridients-weight= ingridient.weight
+      h3.product__title= product.product_title
+      .product__description= product.product_desc
+      .product__features-wrap
+        .product__feature
+          .product__feature-text Калорийность
+          .product__feature-quantity 110 ккал
+        .product__feature
+          .product__feature-text Вес
+          .product__feature-quantity 95 грам
+      .slider__row
+        span.product__price.product__price--size--slider 140 $
+        button.btn.btn--green Заказать

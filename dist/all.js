@@ -43,6 +43,52 @@ function main() {
     };
 
     orderForm.on('submit', orderFormSubmitHandler)
+    
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      nav: true,
+      items: 1,
+      dots: false,
+      navContainerClass: "slider__nav-wrap",
+      navClass: ['slider__nav slider__nav--prev','slider__nav slider__nav--next'],
+      navText: [
+        `<svg class="slider__nav-icon">
+        <use xlink:href="img/sprite.svg#icon-arrow--left"></use>
+      </svg>`,
+      `<svg class="slider__nav-icon">
+      <use xlink:href="img/sprite.svg#icon-arrow--right"></use>
+    </svg>`
+      ]
+
+      
+
+    });
+
+    // Slider product
+    // let teamSlider = $('#team-slider');
+    // let teamSliderItems = teamSlider.find(".slider__item");
+    // let teamSliderScreen = teamSlider.find(".slider__screen");
+    // let teamSliderRibbon = teamSlider.find(".slider__ribbon");
+    // $(window).on('resize', (ev) => {
+    //   let slideHeight = teamSliderItems.outerHeight(true);
+    //   teamSliderScreen.height(slideHeight + 2);
+    //   let sliderWidth = $(teamSlider).width();
+    //   console.log(sliderWidth);
+    //   teamSliderItems.width(sliderWidth);
+    // });
+    // let teamSliderControlPrev = teamSlider.find(".slider__nav--prev");
+    // let teamSliderControlNext = teamSlider.find(".slider__nav--Next");
+    // teamSliderControlPrev.on('click',ev => {
+    //   let sliderWidth = $(teamSlider).width();
+    //   teamSliderRibbon.css('margin-left', -sliderWidth);
+    // });
+    // teamSliderControlPrev.on('click',ev => {
+    //   let sliderWidth = $(teamSlider).width();
+    //   teamSliderRibbon.css('margin-left', sliderWidth);});
+
+    
+
+
 
 }
 

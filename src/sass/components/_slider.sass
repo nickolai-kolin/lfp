@@ -1,20 +1,36 @@
 .slider
+  margin-left: 40px
+  margin-right: 40px
   position: relative
-  padding-left: 40px
-  padding-right: 40px
+  margin: 0 auto
+  &::after
+      content: url('../img/bg-leaf-blured-slider.png')
+      position: absolute
+      left: 2%
+      top: 20%
+      @include until($tablet)
+        transform: scale(.7)
+        left: 2%
+        top: 9%
+      @include desktop
+        left: -7%
+        top: 30%
+
   @include until($desktop)
     text-align: center
     max-width: 68%
   @include until($tablet)
-    max-width: 100%
+    max-width: 96%
     padding: 0 10px
+
   &__row
     display: flex
     @include until($desktop)
       justify-content: center
   &__product-price
   &__item
-    display: flex
+    padding: 5px
+    display: inline-flex
     align-items: center
     justify-content: space-between
     @include until($desktop)
@@ -33,15 +49,7 @@
     @include until($tablet)
       margin-bottom: rem(30px)
       max-width: 65%
-    &::before
-      content: url('../img/bg-leaf-blured-slider.png')
-      position: absolute
-      left: -15%
-      top: 30%
-      @include until($tablet)
-        transform: scale(.7)
-        left: -25%
-        top: 30%
+    
     &::after
       content: url('../img/bg-leaf-slider.png')
       position: absolute
@@ -63,15 +71,16 @@
   &__nav
     position: absolute
     top: 55%
+    cursor: pointer
     @include until($desktop)
       top: 30%
     @include until($tablet)
       top: 15%
     
     &--prev
-      left: 0
+      left: -3%
     &--next
-      right: 0
+      right: -3%
     
   &__nav-icon
     fill: none
