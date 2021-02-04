@@ -3,7 +3,8 @@
     position: relative
     padding-top: 5%
     background: #F8FAF9 no-repeat url('../img/bg-feedback-raspberry.svg') right top rem(22px)
-    display: flex
+    display: none
+    opacity: 0
     align-items: center
     max-height: 23rem // Нужно, чтоб "автор" мог выйти за пределы блока
     @include until($mobile)
@@ -27,6 +28,10 @@
         top: 0
         left: 50%
         transform: translate(-50%, -56%)
+    &--active
+      display: flex
+      opacity: 1
+
   &__tablist
     display: flex
     justify-content: center

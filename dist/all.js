@@ -1,33 +1,20 @@
 function main() {
-    // let closeBtn = document.querySelectorAll(".btn-close");
-    
-    // Array.from(closeBtn).forEach(el => {
-      //   el.addEventListener('click', event => {
-        //     let nav = event.currentTarget.closest('.nav');
-        //     nav.classList.remove('nav--opened');
-        //   });
-        // });
-    // let heroNav = document.getElementById('hero-nav');
-    // let openBtn = document.querySelectorAll(".btn-burger");
-    // Array.from(openBtn).forEach(el => {
-    //   el.addEventListener('click', event => {
-    //     heroNav.classList.add('nav--opened');
-    //   });
-    // });
       
     // HIDE FULL HEIGHT MENU 
     const heroNavSel = '#hero-nav';
-    const toogleHeroNav = () => {
-      const heroNav = $(heroNavSel);
-      const isFound = heroNav.length > 0
-      const err = () => console.error(`Error: '${heroNavSel}' not found`);
-      isFound ? heroNav.toggleClass("nav--opened") : err();
+    const toogleHeroNav = (ev) => {
+      const currentEl = $(ev.currentTarget);
+      const targetBlock = currentEl.data().toggleElId;
+
+      const heroNav = $(`#${targetBlock}`);
+      const isFound = Boolean(heroNav.length)
+
+      if (isFound === false){
+        return console.error(`Error: '${heroNav}' not found`);
+      }
+      heroNav.toggleClass("nav--opened");
     } 
-    $(`[data-toggle-el-id='${heroNavSel}']`).on('click', toogleHeroNav);
-
-    // $(".btn-close").on('click', toogleHeroNav)
-    // $("#burger").on('click', toogleHeroNav);
-
+    $(`[data-toggle-el-id]`).on('click', toogleHeroNav);
 
 
     // Form
@@ -44,6 +31,7 @@ function main() {
 
     orderForm.on('submit', orderFormSubmitHandler)
     
+    // SLider Product
     $(".owl-carousel").owlCarousel({
       loop: true,
       nav: true,
@@ -59,37 +47,27 @@ function main() {
       <use xlink:href="img/sprite.svg#icon-arrow--right"></use>
     </svg>`
       ]
-
-      
-
     });
 
-    // Slider product
-    // let teamSlider = $('#team-slider');
-    // let teamSliderItems = teamSlider.find(".slider__item");
-    // let teamSliderScreen = teamSlider.find(".slider__screen");
-    // let teamSliderRibbon = teamSlider.find(".slider__ribbon");
-    // $(window).on('resize', (ev) => {
-    //   let slideHeight = teamSliderItems.outerHeight(true);
-    //   teamSliderScreen.height(slideHeight + 2);
-    //   let sliderWidth = $(teamSlider).width();
-    //   console.log(sliderWidth);
-    //   teamSliderItems.width(sliderWidth);
-    // });
-    // let teamSliderControlPrev = teamSlider.find(".slider__nav--prev");
-    // let teamSliderControlNext = teamSlider.find(".slider__nav--Next");
-    // teamSliderControlPrev.on('click',ev => {
-    //   let sliderWidth = $(teamSlider).width();
-    //   teamSliderRibbon.css('margin-left', -sliderWidth);
-    // });
-    // teamSliderControlPrev.on('click',ev => {
-    //   let sliderWidth = $(teamSlider).width();
-    //   teamSliderRibbon.css('margin-left', sliderWidth);});
+    // SlideShow Feedback
+    const tabPanelToggle = ev => {
+      // Activate tab
+      const targetTab = $(ev.currentTarget);
+      const tabList = $('.feedback__tab')
+      tabList.removeClass('feedback__tab--active');
+      targetTab.addClass('feedback__tab--active');
+      // Activate panel
+      const targetPanelId = targetTab.data().tabpanelId;
+      const tabPanelList = $('.feedback__panel');
+      const targetPanel = $(`#${targetPanelId}`);
+      
+      tabPanelList.removeClass('feedback__panel--active');
+      targetPanel.addClass('feedback__panel--active');
+
+    }
+    $('[data-tab]').on('click',tabPanelToggle);
 
     
-
-
-
 }
 
 // Run main once DOMContentLoaded event fired
