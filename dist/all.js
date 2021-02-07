@@ -52,7 +52,10 @@ function main() {
     }
     $('[data-tab]').on('click',tabPanelToggle);
 
-    
+
+    // MENU SECTION
+    const menu = document.getElementById("menu");
+    const menuTrigger = menu.querySelectorAll('.menu__trigger');
     
 }
 
