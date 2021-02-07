@@ -1,0 +1,32 @@
+.overlay
+  display: none
+  position: fixed
+  min-height: 100vh
+  min-width: 100vw
+  background-color: rgba(0,0,0, .8)
+  z-index: 10
+  left: 0
+  top: 0
+  justify-content: center
+  align-items: center
+  &--active
+    display: flex
+
+
+.modal 
+  min-width: 27%
+  max-width: 80%
+  max-height: 500px
+  overflow: hidden
+  background-color: #fff
+  padding: rem(17px) rem(36px)
+  border-radius: 5px
+  text-align: center
+  @include tablet
+    max-width: 60%
+    padding: rem(37px) rem(66px)
+  &__header
+    font-weight: 500
+    margin-bottom: 18px;
+  &--error
+    color: red

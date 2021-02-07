@@ -15,21 +15,6 @@ function main() {
       heroNav.toggleClass("nav--opened");
     } 
     $(`[data-toggle-el-id]`).on('click', toogleHeroNav);
-
-
-    // Form
-    let orderForm = $("#order-form");
-    let orderFormSubmitHandler = ev => {
-      ev.preventDefault();
-      let name = orderForm.find("#order-name").val();
-      let phoneNum = orderForm.find("#order-phone").val();
-      let street = orderForm.find("#order-street").val();
-      let paymentMethod = orderForm.find('input[name=order-payment]:checked').val();
-      let needCallBack = orderForm.find('input[name=order-callback]').is(':checked');
-      console.log(needCallBack);
-    };
-
-    orderForm.on('submit', orderFormSubmitHandler)
     
     // SLider Product
     $(".owl-carousel").owlCarousel({
@@ -67,6 +52,7 @@ function main() {
     }
     $('[data-tab]').on('click',tabPanelToggle);
 
+    
     
 }
 

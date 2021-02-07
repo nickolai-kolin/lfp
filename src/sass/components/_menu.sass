@@ -1,0 +1,47 @@
+.menu
+  height: 100%
+  background: no-repeat url('../img/img-bg-menu-section.jpg')
+  background-size: cover
+  background-position: 50%
+  position: relative
+  @include darkenOverlay($alpha: 0.1)
+  &__content
+    overflow: hidden
+    position: relative // resolse z-index 
+  &__title
+    color: white
+    position: absolute;
+    top: rem(100px)
+    left: rem(85px)
+  &__list
+    display: flex
+    justify-content: flex-end
+  &__item
+    display: flex
+    height: 100vh
+    &--active        
+      // pass
+  &__trigger
+    width: 100px
+    position: relative
+    display: flex
+    align-items: flex-end
+    padding: 22px;
+    &-text
+      display: block
+      position: absolute
+      font-size: rem(48px)
+      color: white
+      transform: rotateZ(-90deg)
+      transform-origin: top left
+  &__item-content
+    display: none;
+    width: 0
+    padding: 30px 80px 30px 30px
+    color: white
+    background-color: rgba(black, .8);
+    backdrop-filter: blur(4px)
+  @for $i from 1 through 3
+    &__trigger-#{$i}
+      background: no-repeat url(../img/img-bg-menu_item-#{$i}.jpg) center / cover
+      @include darkenOverlay($alpha: .4)

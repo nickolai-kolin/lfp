@@ -40,4 +40,12 @@
   @media screen and (min-width:  $widescreen)
     @content
 
-  
+@mixin darkenOverlay($alpha:0.2)
+  &::before // darken bg effect
+    content: ''
+    background-color: rgba(black, $alpha)
+    width: 100%
+    height: 100%
+    position: absolute;
+    top: 0
+    left: 0

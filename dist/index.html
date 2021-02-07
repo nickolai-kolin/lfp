@@ -254,6 +254,27 @@
           </div>
         </div>
       </section>
+      <section class="section menu-section">
+        <div class="menu">
+          <div class="menu__content">
+            <h2 class="section__title menu__title">Меню</h2>
+            <ul class="menu__list"> 
+              <li class="menu__item">
+                <button class="menu__trigger menu__trigger-1"><span class="menu__trigger-text">Батончики </span></button>
+                <div class="menu__item-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium harum, aspernatur nisi sint at necessitatibus cumque eius enim, voluptate quaerat laboriosam dolor magnam doloremque quas omnis, ratione delectus? In, placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias hic nobis facilis autem porro molestiae adipisci aut. Quo voluptates vero, nisi sit itaque voluptatibus eum consectetur ad reprehenderit sed.</div>
+              </li>
+              <li class="menu__item">
+                <button class="menu__trigger menu__trigger-2"><span class="menu__trigger-text">Батончики </span></button>
+                <div class="menu__item-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium harum, aspernatur nisi sint at necessitatibus cumque eius enim, voluptate quaerat laboriosam dolor magnam doloremque quas omnis, ratione delectus? In, placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias hic nobis facilis autem porro molestiae adipisci aut. Quo voluptates vero, nisi sit itaque voluptatibus eum consectetur ad reprehenderit sed.</div>
+              </li>
+              <li class="menu__item">
+                <button class="menu__trigger menu__trigger-3"><span class="menu__trigger-text">Батончики </span></button>
+                <div class="menu__item-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium harum, aspernatur nisi sint at necessitatibus cumque eius enim, voluptate quaerat laboriosam dolor magnam doloremque quas omnis, ratione delectus? In, placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias hic nobis facilis autem porro molestiae adipisci aut. Quo voluptates vero, nisi sit itaque voluptatibus eum consectetur ad reprehenderit sed.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <section class="section-wrapper feedback-section">
         <div class="container">
           <h2 class="section__title feedback-section__title">Отзывы</h2>
@@ -293,48 +314,61 @@
       <div class="section-wrapper section-form">
         <div class="container">
           <h2 class="section__title section-form__title">закажите доставку</h2>
-          <form class="form" action="" id="order-form">
+          <form class="form" action="" novalidate="novalidate" id="order-form">
             <div class="form__group">
               <div class="form__row">
                 <div class="form__group">
-                  <label class="form__label" for="order-name">Имя</label>
-                  <input class="form__input" type="text" name="" id="order-name"/>
+                  <label class="form__label">Имя *
+                    <input class="form__input" type="text" name="name" id="order-name" required="required" value="Kolin"/>
+                  </label>
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="order-phone">Телефон</label>
-                  <input class="form__input" type="text" name="" id="order-phone"/>
-                </div>
-              </div>
-              <div class="form__row">
-                <div class="form__group">
-                  <label class="form__label" for="order-street">Улица</label>
-                  <input class="form__input" type="text" name="" id="order-street"/>
+                  <label class="form__label">Телефон *
+                    <input class="form__input" type="text" name="phone" id="order-phone" required="required" value="321321"/>
+                  </label>
                 </div>
               </div>
               <div class="form__row">
                 <div class="form__group">
-                  <label class="form__label" for="order-streetnum">Дом</label>
-                  <input class="form__input" type="text" name="" id="order-streetnum"/>
+                  <label class="form__label">Email *
+                    <input class="form__input" type="email" name="to" id="order-email" required="required" value="kolin@coding.pro"/>
+                  </label>
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="order-block">Корпус</label>
-                  <input class="form__input" type="text" name="" id="order-block"/>
+                  <label class="form__label">Улица
+                    <input class="form__input" type="text" name="order-street" id="order-street"/>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label class="form__label">Дом
+                    <input class="form__input" type="text" name="" id="order-streetnum"/>
+                  </label>
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="order-ap">Квартира</label>
-                  <input class="form__input" type="text" name="" id="order-ap"/>
+                  <label class="form__label">Корпус
+                    <input class="form__input" type="text" name="" id="order-block"/>
+                  </label>
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="order-floor">Этаж</label>
-                  <input class="form__input" type="text" name="" id="order-floor"/>
+                  <label class="form__label">Квартира
+                    <input class="form__input" type="text" name="" id="order-ap"/>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="form__label">Этаж
+                    <input class="form__input" type="text" name="" id="order-floor"/>
+                  </label>
                 </div>
               </div>
             </div>
             <div class="form__group form__group--ml form__group--mt">
               <div class="form__row">
                 <div class="form__group">
-                  <label class="form__label" for="order-msg">Комментарий</label>
-                  <textarea class="form__msg form__input" id="order-msg" name="order-msg"></textarea>
+                  <label class="form__label">Комментарий *
+                    <textarea class="form__msg form__input" id="order-msg" name="comment" required="required">Hello</textarea>
+                  </label>
                 </div>
               </div>
               <div class="form__row">
@@ -391,6 +425,12 @@
         </div>
       </section>
       <div class="fixed-sidenav"><a class="fixed-sidenav__link fixed-sidenav__link--active" href="#" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a>
+      </div>
+    </div>
+    <div class="overlay" id="overlay">
+      <div class="modal" id="modal">
+        <h5 class="modal__header"> </h5>
+        <button class="btn btn--green modal__close">Закрыть</button>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>

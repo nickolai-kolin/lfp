@@ -1,37 +1,43 @@
 .section-wrapper.section-form
   .container
     h2.section__title.section-form__title закажите доставку
-    form.form(action='')#order-form
+    form.form(action='' novalidate)#order-form
       .form__group
         .form__row
           .form__group
-            label.form__label(for="order-name") Имя
-            input.form__input(type="text" name="" id='order-name')
+            label.form__label Имя *
+              input.form__input(type="text" name="name" id='order-name'  required value='Kolin') 
           .form__group
-            label.form__label(for="order-phone") Телефон
-            input.form__input(type="text" name="" id='order-phone')
+            label.form__label Телефон *
+              input.form__input(type="text" name="phone" id='order-phone' required value='321321')
         .form__row
           .form__group
-            label.form__label(for="order-street") Улица
-            input.form__input(type="text" name="" id='order-street')
+            label.form__label Email *
+              input.form__input(type="email" name="to" id='order-email' required value='kolin@coding.pro')
+          .form__group
+            label.form__label Улица
+              input.form__input(type="text" name="order-street" id='order-street')
         .form__row
           .form__group
-            label.form__label(for="order-streetnum") Дом
-            input.form__input(type="text" name="" id='order-streetnum')
+            label.form__label Дом
+              input.form__input(type="text" name="" id='order-streetnum')
+
           .form__group
-            label.form__label(for="order-block") Корпус
-            input.form__input(type="text" name="" id='order-block')
+            label.form__label Корпус
+              input.form__input(type="text" name="" id='order-block')
           .form__group
-            label.form__label(for="order-ap") Квартира
-            input.form__input(type="text" name="" id='order-ap')
+            label.form__label Квартира
+              input.form__input(type="text" name="" id='order-ap')
           .form__group
-            label.form__label(for="order-floor") Этаж
-            input.form__input(type="text" name="" id='order-floor')
+            label.form__label Этаж
+              input.form__input(type="text" name="" id='order-floor')
       .form__group.form__group--ml.form__group--mt
         .form__row
           .form__group
-            label.form__label(for="order-msg") Комментарий
-            textarea.form__msg.form__input#order-msg(name="order-msg")
+            label.form__label Комментарий *
+              textarea.form__msg.form__input#order-msg(name="comment" required) Hello
+              //- span.form__validation Fill this pls
+
         .form__row
             label.form__field.fake-input(for="order-payment-1")
               input.fake-input__input.fake-input__input--hide(type='radio', name='order-payment', value='change-need', id='order-payment-1')
