@@ -82,7 +82,7 @@ function main() {
 
       if (currentInput.validationMessage) {
         showValidationErrorMsg(currentInput, currentInput.validationMessage);
-        return false;a
+        return false;
       }
       return true;
     });
