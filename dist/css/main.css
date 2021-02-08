@@ -620,7 +620,7 @@ li {
   top: 50%;
   z-index: 1000;
   transform: translateY(-50%);
-  display: none; }
+  display: block; }
   .fixed-sidenav__link {
     display: block;
     width: 18px;
@@ -639,7 +639,7 @@ li {
       position: absolute;
       width: 8px;
       height: 8px;
-      background-color: #FFFFFF;
+      background-color: #f7f7f7;
       border-radius: 50%;
       top: 4px;
       left: 4px; }

@@ -1,97 +1,119 @@
-
 function main() {
-  let orderForm = document.getElementById("order-form");
-
-  // Preset
-
-  const nonValidCssClass = "form__input--nonvalid";
+  // Presets
   const API_EMAIL = "https://webdev-api.loftschool.com/sendmail";
 
-  // Utils
-  const createErrorMsgEl = (msg, _class = "form__validation") => {
+  const nonValidCssClass = "form__input--nonvalid";
+  const customInputNamesForSending = ["name", "phone", "comment", "to"];
+
+  // Selectors
+
+  const modalEl = document.getElementById("modal");
+  const modalHeader = document.querySelector(".modal__header");
+  const overlay = document.getElementById("overlay");
+  const orderForm = document.getElementById("order-form");
+
+  // Support Func
+
+  function createErrorMsgEl(msg, _class = "form__validation") {
     // Return Error Object for appending
     const errorMsgEl = document.createElement("span");
     errorMsgEl.classList.add(_class);
     errorMsgEl.textContent = msg;
     return errorMsgEl;
-  };
+  }
 
-  const removeNonValidFields = (form) => {
-    // Get all validaiton fields a.k.a Error Fields
-    for (let input of form.elements) {
-      input.classList.remove("form__input--nonvalid");
-    }
+  function removeAllErrorMsg(form) {
+    // Remove non-valid css class
+    Array.from(form.elements).forEach((el) =>
+      el.classList.remove("form__input--nonvalid")
+    );
+    // Remove Error Elements
     const allErrorMsgEl = form.querySelectorAll(".form__validation");
     Array.from(allErrorMsgEl).forEach((el) => el.remove());
-  };
+  }
 
-  // Utils End
+  function clearForm(form) {
+    Array.from(form.elements).forEach((el) => (el.value = ""));
+  }
 
-  // Main Logic
+  function toggleBodyScroll() {
+    const isScrollHidden = document.body.style.overflow == "hidden";
+    document.body.style.overflow = isScrollHidden ? "auto" : "hidden";
+  }
 
-  orderForm.onsubmit = function (ev) {
-    // this = ev.currentTarget
-    ev.preventDefault();
-    removeNonValidFields(this);
-    const customInputNamesForSending = ["name", "phone", "comment", "to"];
-    // Validation
-    let validFlag = true;
-    let resultObj = {};
-    for (const name of customInputNamesForSending) {
-      const currentInput = this.elements[name];
-      // Populating resultObj
-      resultObj[`${name}`] = currentInput.value;
+  function toggleFixedNav() {
+    const fixedSideNav = document.getElementById("fixed-sidenav");
+    console.log(fixedSideNav.style.display);
+    fixedSideNav.style.display =
+      fixedSideNav.style.display == "none" ? "block" : "none";
+  }
 
-      currentInput.checkValidity();
-      if (currentInput.validationMessage) {
-        const ErrorMsgEl = createErrorMsgEl(currentInput.validationMessage);
-        currentInput.after(ErrorMsgEl);
-        currentInput.classList.add(nonValidCssClass);
-        validFlag = false;
-      }
-    }
-    if (validFlag) {
-      const resultObjJSON = JSON.stringify(resultObj);
-      sendForm(resultObjJSON);
-    }
-  };
-
-  const modalEl = document.getElementById("modal");
-  const modalClose = modalEl.querySelector(".modal__close");
-  const overlay = document.getElementById("overlay");
-  const modalHeader = modalEl.querySelector(".modal__header");
-  
-  modalClose.onclick = () => hideModal();
-  overlay.onclick = () => hideModal();
-  
-  
-  function showModal(msg='', error=false) {
-    modalEl.classList.add("modal--active");
-    overlay.classList.add("overlay--active");    
-    if (error) {
-      modalEl.classList.add('modal--error');
-    }
-    modalHeader.innerText = msg;
+  function showValidationErrorMsg(el, msg) {
+    const ErrorMsgEl = createErrorMsgEl(msg);
+    el.after(ErrorMsgEl);
   }
 
   function hideModal() {
+    toggleBodyScroll();
+    toggleFixedNav();
     modalEl.classList.remove("modal--active");
     modalEl.classList.remove("modal--error");
     overlay.classList.remove("overlay--active");
   }
 
-  function sendForm(payload) {
+  function showModal(msg = "", error = false) {
+    toggleBodyScroll();
+    toggleFixedNav();
+    modalEl.classList.add("modal--active");
+    overlay.classList.add("overlay--active");
+    // Adding Error Color for modal heading
+    if (error) {
+      modalEl.classList.add("modal--error");
+    }
+    modalHeader.innerText = msg;
+  }
+
+  function isValidForm(form) {
+    // Validation Step
+    const statusArr = customInputNamesForSending.map((name) => {
+      const currentInput = form.elements[name];
+      currentInput.checkValidity();
+
+      if (currentInput.validationMessage) {
+        showValidationErrorMsg(currentInput, currentInput.validationMessage);
+        return false;
+      }
+      return true;
+    });
+    return statusArr.every((status) => status === true);
+  }
+
+  function sendRequestXHR(payload, request_url = API_EMAIL) {
     const client = new XMLHttpRequest();
-    client.open("POST", API_EMAIL);
-    client.setRequestHeader("content-type", "application/json");
+    client.open("POST", request_url);
+    // client.setRequestHeader("content-type", "application/json");
     client.responseType = "json";
     client.send(payload);
     client.onload = () => {
       const resp = client.response;
       const error = resp.status == 1 ? false : true;
+
       showModal(resp.message, error);
     };
   }
-}
 
+  // Main Logic
+
+  orderForm.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    removeAllErrorMsg(this); // Clearing Last Submit Errors
+
+    if (isValidForm(this)) {
+      sendRequestXHR(new FormData(this));
+      clearForm(this);
+    }
+  });
+
+  overlay.addEventListener("click", () => hideModal());
+}
 main();
