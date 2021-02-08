@@ -33,6 +33,7 @@ function main() {
   }
 
   function clearForm(form) {
+    // form.reset();
     Array.from(form.elements).forEach((el) => (el.value = ""));
   }
 
@@ -81,7 +82,7 @@ function main() {
 
       if (currentInput.validationMessage) {
         showValidationErrorMsg(currentInput, currentInput.validationMessage);
-        return false;
+        return false;a
       }
       return true;
     });
@@ -91,7 +92,6 @@ function main() {
   function sendRequestXHR(payload, request_url = API_EMAIL) {
     const client = new XMLHttpRequest();
     client.open("POST", request_url);
-    // client.setRequestHeader("content-type", "application/json");
     client.responseType = "json";
     client.send(payload);
     client.onload = () => {
