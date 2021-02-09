@@ -967,33 +967,52 @@ li {
     left: 5.3125rem; }
   .menu__list {
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    position: relative; }
   .menu__item {
     display: flex;
     height: 100vh; }
   .menu__trigger {
-    width: 100px;
+    width: 40px;
     position: relative;
     display: flex;
     align-items: flex-end;
-    padding: 22px; }
+    padding: 5px; }
+    @media screen and (min-width: 480px) {
+      .menu__trigger {
+        width: 80px;
+        padding: 14px; } }
+    @media screen and (min-width: 992px) {
+      .menu__trigger {
+        padding: 22px;
+        width: 100px; } }
     .menu__trigger-text {
       display: block;
       position: absolute;
-      font-size: 3rem;
+      font-size: 1.5rem;
       color: white;
       transform: rotateZ(-90deg);
-      transform-origin: top left; }
-  .menu__item-content {
-    display: none;
+      transform-origin: top left;
+      white-space: nowrap; }
+      @media screen and (min-width: 480px) {
+        .menu__trigger-text {
+          font-size: 3rem; } }
+  .menu__item-content-wrap {
     width: 0;
-    padding: 30px 80px 30px 30px;
+    transition: .3s;
+    overflow: hidden; }
+  .menu__item-content {
+    padding: 10px;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(4px); }
-  .menu__trigger-1 {
+    backdrop-filter: blur(4px);
+    height: 100%; }
+    @media screen and (min-width: 992px) {
+      .menu__item-content {
+        padding: 30px; } }
+  .menu__trigger--1 {
     background: no-repeat url(../img/img-bg-menu_item-1.jpg) center/cover; }
-    .menu__trigger-1::before {
+    .menu__trigger--1::before {
       content: '';
       background-color: rgba(0, 0, 0, 0.4);
       width: 100%;
@@ -1001,9 +1020,9 @@ li {
       position: absolute;
       top: 0;
       left: 0; }
-  .menu__trigger-2 {
+  .menu__trigger--2 {
     background: no-repeat url(../img/img-bg-menu_item-2.jpg) center/cover; }
-    .menu__trigger-2::before {
+    .menu__trigger--2::before {
       content: '';
       background-color: rgba(0, 0, 0, 0.4);
       width: 100%;
@@ -1011,9 +1030,9 @@ li {
       position: absolute;
       top: 0;
       left: 0; }
-  .menu__trigger-3 {
+  .menu__trigger--3 {
     background: no-repeat url(../img/img-bg-menu_item-3.jpg) center/cover; }
-    .menu__trigger-3::before {
+    .menu__trigger--3::before {
       content: '';
       background-color: rgba(0, 0, 0, 0.4);
       width: 100%;

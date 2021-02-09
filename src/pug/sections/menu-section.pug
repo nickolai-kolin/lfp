@@ -3,8 +3,10 @@ section.section.menu-section
     .menu__content
       h2.section__title.menu__title Меню
       ul.menu__list 
-        each item in [1,2,3]
-          li.menu__item
-            button.menu__trigger(class='menu__trigger-'+item)
-              span.menu__trigger-text Батончики 
-            .menu__item-content Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium harum, aspernatur nisi sint at necessitatibus cumque eius enim, voluptate quaerat laboriosam dolor magnam doloremque quas omnis, ratione delectus? In, placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias hic nobis facilis autem porro molestiae adipisci aut. Quo voluptates vero, nisi sit itaque voluptatibus eum consectetur ad reprehenderit sed.
+        each item, index in menu
+          - var cls = index + 1
+          li.menu__item(data-menu-item='')
+            button.menu__trigger(class='menu__trigger--'+cls data-menu-trigger='')
+              span.menu__trigger-text= item.title
+            .menu__item-content-wrap(data-menu-content-wrap='')
+              .menu__item-content(data-menu-content)= item.description

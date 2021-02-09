@@ -16,32 +16,50 @@
   &__list
     display: flex
     justify-content: flex-end
+    position: relative
   &__item
     display: flex
     height: 100vh
     &--active        
       // pass
   &__trigger
-    width: 100px
+    width: 40px
     position: relative
     display: flex
     align-items: flex-end
-    padding: 22px;
+    padding: 5px
+    @include mobile
+      width: 80px
+      padding: 14px
+    @include desktop
+      padding: 22px
+      width: 100px
+
     &-text
       display: block
       position: absolute
-      font-size: rem(48px)
+      font-size: rem(24px)
       color: white
       transform: rotateZ(-90deg)
       transform-origin: top left
-  &__item-content
-    display: none;
+      white-space: nowrap
+      
+      @include mobile
+        font-size: rem(48px)
+  &__item-content-wrap
     width: 0
-    padding: 30px 80px 30px 30px
+    transition: .3s
+    overflow: hidden
+  &__item-content
+    padding: 10px
     color: white
-    background-color: rgba(black, .8);
+    background-color: rgba(black, .8)
     backdrop-filter: blur(4px)
+    height: 100%
+    @include desktop
+      padding: 30px
+
   @for $i from 1 through 3
-    &__trigger-#{$i}
+    &__trigger--#{$i}
       background: no-repeat url(../img/img-bg-menu_item-#{$i}.jpg) center / cover
       @include darkenOverlay($alpha: .4)
