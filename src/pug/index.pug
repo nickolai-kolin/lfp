@@ -9,7 +9,7 @@ html(lang="ru")
     link(rel="stylesheet" href="css/main.css")
     title CHOCO
   body
-    .page-wrapper
+    .page-wrapper#page-wrapper
       include sections/hero-section.pug
       include sections/why-section.pug
       include sections/product-slider-section.pug
@@ -18,13 +18,13 @@ html(lang="ru")
       include sections/feedback-section.pug
       include sections/form-section.pug
       include sections/map-section.pug
-      include components/fixed-sidenav.pug
-      
+    include components/fixed-sidenav.pug
     include components/modal.pug
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js")
     script(src="form.js")
+    script(src="owl.js")
     script(src="all.js")
     script(src="team.js")
     script(src="menu.js") 

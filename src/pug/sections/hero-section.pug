@@ -1,4 +1,4 @@
-section.section.hero-section
+section.section.hero-section#hero
   .hero-section__container.container
     //- Header
     header.hero-section__header
@@ -10,7 +10,7 @@ section.section.hero-section
           svg.btn-close__icon
             +use("#icon-close")
         each link in nav
-          a.nav__link(href="#")= link
+          a.nav__link(href="#" data-ops-section-id=link.opsSectionId)= link.name
       address.hero-section__phone.phone
         svg.icon.hero-section__phone-icon
           use(xlink:href='img/sprite.svg#icon-phone')

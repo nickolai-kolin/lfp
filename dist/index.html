@@ -8,8 +8,8 @@
     <title>CHOCO</title>
   </head>
   <body>
-    <div class="page-wrapper">
-      <section class="section hero-section">
+    <div class="page-wrapper" id="page-wrapper">
+      <section class="section hero-section" id="hero">
         <div class="hero-section__container container">
           <header class="hero-section__header">
             <svg class="icon hero-section__logo-icon">
@@ -20,7 +20,7 @@
                 <svg class="btn-close__icon">
                   <use xlink:href="img/sprite.svg#icon-close"></use>
                 </svg>
-              </button><a class="nav__link" href="#">О нас</a><a class="nav__link" href="#">Батончики</a><a class="nav__link" href="#">Команда</a><a class="nav__link" href="#">Меню</a><a class="nav__link" href="#">Отзывы</a><a class="nav__link" href="#">Как мы работаем</a><a class="nav__link" href="#">Контакты</a>
+              </button><a class="nav__link" href="#" data-ops-section-id="why">О нас</a><a class="nav__link" href="#" data-ops-section-id="product">Батончики</a><a class="nav__link" href="#" data-ops-section-id="menusec">Меню</a><a class="nav__link" href="#" data-ops-section-id="feedback">Отзывы</a><a class="nav__link" href="#" data-ops-section-id="hero">Как мы работаем</a><a class="nav__link" href="#" data-ops-section-id="map">Контакты</a>
             </nav>
             <address class="hero-section__phone phone">
               <svg class="icon hero-section__phone-icon">
@@ -60,7 +60,7 @@
           </div>
         </div>
       </section>
-      <section class="section-wrapper why-section">
+      <section class="section-wrapper why-section" id="why">
         <div class="container">
           <div class="why-section__header">
             <h2 class="section__title">Почему Chocco?</h2>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </section>
-      <div class="product-slider-section section">
+      <section class="product-slider-section section" id="product">
         <div class="container">
           <div class="slider" id="team-slider">
             <div class="owl-carousel">
@@ -224,8 +224,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <section class="section team-section">
+      </section>
+      <section class="section team-section" id="team">
         <div class="container">
           <h2 class="section__title section__title--text--center team-section__title">Команда</h2>
           <div class="team" id="team">
@@ -254,7 +254,7 @@
           </div>
         </div>
       </section>
-      <section class="section menu-section">
+      <section class="section menu-section" id="menusec">
         <div class="menu" id="menu">
           <div class="menu__content">
             <h2 class="section__title menu__title">Меню</h2>
@@ -281,7 +281,7 @@
           </div>
         </div>
       </section>
-      <section class="section-wrapper feedback-section">
+      <section class="section-wrapper feedback-section" id="feedback">
         <div class="container">
           <h2 class="section__title feedback-section__title">Отзывы</h2>
           <div class="feedback">
@@ -317,7 +317,7 @@
           </div>
         </div>
       </section>
-      <div class="section-wrapper section-form">
+      <section class="section-wrapper section-form" id="form">
         <div class="container">
           <h2 class="section__title section-form__title">закажите доставку</h2>
           <form class="form" action="" novalidate="novalidate" id="order-form">
@@ -397,8 +397,8 @@
             </div>
           </form>
         </div>
-      </div>
-      <section class="map-section">
+      </section>
+      <section class="map-section" id="map">
         <div class="map-section__img"></div>
         <div class="map-section__contacts">
           <div class="contacts-section">
@@ -430,18 +430,18 @@
           </div>
         </div>
       </section>
-      <div class="fixed-sidenav" id="fixed-sidenav"><a class="fixed-sidenav__link fixed-sidenav__link--active" href="#" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a><a class="fixed-sidenav__link" href="" id=""></a>
-      </div>
     </div>
+    <div class="fixed-sidenav" id="fixed-sidenav"></div>
     <div class="overlay" id="overlay">
       <div class="modal" id="modal">
         <h5 class="modal__header"> </h5>
         <button class="btn btn--green modal__close">Закрыть</button>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="form.js"></script>
+    <script src="owl.js"></script>
     <script src="all.js"></script>
     <script src="team.js"></script>
     <script src="menu.js"> </script>
