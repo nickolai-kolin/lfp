@@ -1,0 +1,19 @@
+.section.player-section#playersec
+  .container 
+    h2.section__title.player-section__title Как мы работаем
+    .player-section__container
+      .player.player--paused
+        .player__video#player
+        .player__controls
+          button.player__start
+            svg.player__start-icon
+              +use("#icon-play")
+          
+          .player__playback
+
+          .player__time
+            span.player__time-current 0 : 00
+            span.player__time-sep /
+            span.player__time-duration 0 : 00
+          
+

@@ -317,6 +317,25 @@
           </div>
         </div>
       </section>
+      <div class="section player-section" id="playersec">
+        <div class="container"> 
+          <h2 class="section__title player-section__title">Как мы работаем</h2>
+          <div class="player-section__container">
+            <div class="player player--paused">
+              <div class="player__video" id="player"></div>
+              <div class="player__controls">
+                <button class="player__start">
+                  <svg class="player__start-icon">
+                    <use xlink:href="img/sprite.svg#icon-play"></use>
+                  </svg>
+                </button>
+                <div class="player__playback"></div>
+                <div class="player__time"><span class="player__time-current">0 : 00</span><span class="player__time-sep">/</span><span class="player__time-duration">0 : 00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="section-wrapper section-form" id="form">
         <div class="container">
           <h2 class="section__title section-form__title">закажите доставку</h2>
@@ -399,12 +418,12 @@
         </div>
       </section>
       <section class="map-section" id="map">
-        <div class="map-section__img"></div>
+        <div class="map-section__map" id="ymap"></div>
         <div class="map-section__contacts">
           <div class="contacts-section">
             <div class="contacts-section__content container">
               <div class="contacts-section__address">
-                <address class="location">Tokyo, Robotics street 12, ap 22</address>
+                <address class="location">Dubai, Business Bay 12</address>
                 <address class="phone contacts-section__phone">
                   <svg class="phone__icon phone__icon--fill--green">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
@@ -440,10 +459,14 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://api-maps.yandex.com/2.1/?lang=ru_RU"></script>
+    <script src="https://www.youtube.com/iframe_api"> </script>
     <script src="form.js"></script>
     <script src="owl.js"></script>
     <script src="all.js"></script>
     <script src="team.js"></script>
-    <script src="menu.js"> </script>
+    <script src="menu.js"></script>
+    <script src="map.js"> </script>
+    <script src="player.js"> </script>
   </body>
 </html>
