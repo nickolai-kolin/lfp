@@ -4,16 +4,25 @@
     .player-section__container
       .player.player--paused
         .player__video#player
+        .player__slash
+          button.player__start
+            svg.player__slash-icon
+              +use("#icon-play")
         .player__controls
           button.player__start
-            svg.player__start-icon
+            svg.player__icon
               +use("#icon-play")
-          
           .player__playback
-
+            .player__progressbar
+            .player__marker
+          svg.player__icon
+              +use("#icon-volume")
+          .player__volume
+            .player__volumebar
+            .player__volumemarker
           .player__time
-            span.player__time-current 0 : 00
+            span.player__time-current 00:00
             span.player__time-sep /
-            span.player__time-duration 0 : 00
+            span.player__time-duration 00:00
           
 

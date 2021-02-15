@@ -1349,15 +1349,38 @@ li {
     color: red; }
 
 .player {
+  max-width: 80%;
   width: 662px;
   height: 392px;
   position: relative;
   margin: 0 auto;
   display: block; }
-  .player--paused .player__start-icon {
+  .player__video {
+    max-width: 100%; }
+  .player--paused .player__icon {
     fill: #eee; }
   .player--paused .player__time {
     color: #eee; }
+  .player--paused .player__marker, .player--paused .player__volumemarker {
+    background-color: #eee; }
+  .player--paused .player__progressbar, .player--paused .player__volumebar {
+    background-color: #111; }
+  .player--paused .player__slash {
+    display: flex; }
+  .player__slash {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: none; }
+  .player__slash-icon {
+    widht: 75px;
+    height: 110px;
+    fill: #fff; }
   .player__controls {
     position: absolute;
     height: 35px;
@@ -1369,18 +1392,38 @@ li {
     padding: 10px 17px;
     display: flex;
     justify-content: space-between; }
-  .player__start {
-    height: 17px; }
-  .player__start-icon {
+  .player__icon {
     fill: #626262;
-    width: 12px;
+    width: 14px;
     height: 17px; }
   .player__time {
     font-family: "Arial";
     display: flex;
     font-size: 0.9rem;
     line-height: 1rem;
-    color: #626262; }
+    color: #626262;
+    margin-left: 20px; }
+  .player__playback, .player__volume {
+    position: relative;
+    flex: 4;
+    display: flex;
+    align-items: center;
+    margin: 0 20px; }
+  .player__progressbar, .player__volumebar {
+    background-color: #626262;
+    height: 5px;
+    flex: 2; }
+  .player__volume {
+    flex: 1; }
+  .player__marker, .player__volumemarker {
+    position: absolute;
+    content: "";
+    display: block;
+    border-radius: 50%;
+    background-color: #626262;
+    width: 15px;
+    height: 15px;
+    left: 0; }
 
 .map-section {
   height: 100vh;
@@ -1635,6 +1678,7 @@ li {
 
 .player-section {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  background-color: #F8FAF9; }
   .player-section__title {
     text-align: center; }

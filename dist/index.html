@@ -323,14 +323,31 @@
           <div class="player-section__container">
             <div class="player player--paused">
               <div class="player__video" id="player"></div>
-              <div class="player__controls">
+              <div class="player__slash">
                 <button class="player__start">
-                  <svg class="player__start-icon">
+                  <svg class="player__slash-icon">
                     <use xlink:href="img/sprite.svg#icon-play"></use>
                   </svg>
                 </button>
-                <div class="player__playback"></div>
-                <div class="player__time"><span class="player__time-current">0 : 00</span><span class="player__time-sep">/</span><span class="player__time-duration">0 : 00</span></div>
+              </div>
+              <div class="player__controls">
+                <button class="player__start">
+                  <svg class="player__icon">
+                    <use xlink:href="img/sprite.svg#icon-play"></use>
+                  </svg>
+                </button>
+                <div class="player__playback">
+                  <div class="player__progressbar"></div>
+                  <div class="player__marker"></div>
+                </div>
+                <svg class="player__icon">
+                  <use xlink:href="img/sprite.svg#icon-volume"></use>
+                </svg>
+                <div class="player__volume">
+                  <div class="player__volumebar"></div>
+                  <div class="player__volumemarker"></div>
+                </div>
+                <div class="player__time"><span class="player__time-current">00:00</span><span class="player__time-sep">/</span><span class="player__time-duration">00:00</span></div>
               </div>
             </div>
           </div>
