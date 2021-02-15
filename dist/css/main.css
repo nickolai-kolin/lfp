@@ -1355,6 +1355,18 @@ li {
   position: relative;
   margin: 0 auto;
   display: block; }
+  .player::before {
+    content: url(../img/img-leaf-player.png);
+    display: block;
+    position: absolute;
+    left: -80px;
+    bottom: -80px; }
+  .player::after {
+    content: url(../img/img-leafblured-player.png);
+    display: block;
+    position: absolute;
+    right: -80px;
+    top: -80px; }
   .player__video {
     max-width: 100%; }
   .player--paused .player__icon {
@@ -1403,6 +1415,9 @@ li {
     line-height: 1rem;
     color: #626262;
     margin-left: 20px; }
+    @media screen and (max-width: 767px) {
+      .player__time {
+        display: none; } }
   .player__playback, .player__volume {
     position: relative;
     flex: 4;
@@ -1681,4 +1696,5 @@ li {
   align-items: center;
   background-color: #F8FAF9; }
   .player-section__title {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 40px; }

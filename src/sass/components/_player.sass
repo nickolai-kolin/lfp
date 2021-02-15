@@ -5,6 +5,18 @@
   position: relative
   margin: 0 auto
   display: block
+  &::before
+    content: url(../img/img-leaf-player.png)
+    display: block
+    position: absolute
+    left: -80px
+    bottom: -80px
+  &::after
+    content: url(../img/img-leafblured-player.png)
+    display: block
+    position: absolute
+    right: -80px
+    top: -80px
   &__video
     max-width: 100%
   &--paused
@@ -57,6 +69,8 @@
     line-height: 1rem
     color: #626262
     margin-left: 20px
+    @include until($tablet)
+      display: none
   &__playback, &__volume
     position: relative
     flex: 4
