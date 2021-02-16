@@ -39,7 +39,6 @@ function myForm() {
 
   function toggleBodyScroll() {
     const isScrollHidden = document.body.style.overflow == "hidden";
-    document.body.style.overflow = isScrollHidden ? "auto" : "hidden";
   }
 
   function toggleFixedNav() {

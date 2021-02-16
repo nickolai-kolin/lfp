@@ -498,9 +498,11 @@ h7 {
   padding: 0; }
 
 html {
+  height: 100%;
   font-size: 16px; }
 
 body {
+  height: 100%;
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
@@ -532,6 +534,7 @@ li {
   list-style: none; }
 
 .page-wrapper {
+  height: 100%;
   transition: .7s;
   height: 100vh; }
 
