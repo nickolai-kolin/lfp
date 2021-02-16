@@ -732,6 +732,8 @@ li {
       @media screen and (max-width: 991px) {
         .cart-adv:not(:first-of-type)::before {
           display: none; } }
+  .cart-adv__description {
+    font-weight: 300; }
   .cart-adv__img {
     padding: 5px;
     border-radius: 50%;
