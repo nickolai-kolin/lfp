@@ -6,5 +6,5 @@
   git clone https://github.com/nickolai-kolin/lfp.git
   git init
   git install
-  npm run watch # Google Chrome default opens
+  npm run watch 
 ```

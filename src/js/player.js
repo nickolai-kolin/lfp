@@ -8,14 +8,18 @@ const playerMarker = document.querySelector(".player__marker");
 
 const playerVolumeMarker = document.querySelector(".player__volumemarker");
 const playerVolume = document.querySelector(".player__volume");
+const playerVolumeIcon = document.querySelector(".player__volume-icon");
 
 function eventsInit() {
   Array.from(playerStart).forEach((el) => {
     el.addEventListener("click", (ev) => {
       const currentState = player.getPlayerState();
-      if (currentState == 1) {player.pauseVideo()};
+      if (currentState == 1) {
+        player.pauseVideo();
+      }
       if (currentState == 2 || currentState == 0 || currentState == 5) {
-        player.playVideo();}
+        player.playVideo();
+      }
     });
   });
   playerPlayback.addEventListener("click", (ev) => {
@@ -27,10 +31,11 @@ function eventsInit() {
     player.seekTo(newCurrentSec);
   });
 
-  playerVolume.addEventListener('click', (ev)=>{
+  playerVolume.addEventListener("click", (ev) => {
     const newVolume = (100 * ev.layerX) / playerVolume.clientWidth;
     setPlayerVolume(newVolume);
   });
+  playerVolumeIcon.addEventListener("click", mutePlayer);
 }
 
 function converTime(sec) {
@@ -44,11 +49,33 @@ function converTime(sec) {
     // Check
     return t < 10 ? `0${t}` : `${t}`;
   }
-  let resultFormat = hh > 0 ? `${_formatPeriod(hh)}:${_formatPeriod(mm)}:${_formatPeriod(ss)}` : `${_formatPeriod(mm)}:${_formatPeriod(ss)}`
+  let resultFormat =
+    hh > 0
+      ? `${_formatPeriod(hh)}:${_formatPeriod(mm)}:${_formatPeriod(ss)}`
+      : `${_formatPeriod(mm)}:${_formatPeriod(ss)}`;
   return `${_formatPeriod(mm)}:${_formatPeriod(ss)}`;
 }
 
-function setPlayerVolume(vol){
+
+
+const mutePlayerInit = () => {
+  // Да детка, это замкнутная функция mutePlayerInit
+  let savedVolume;
+  function vol(){
+    let isMuted = player.getVolume() == 0;
+    if (isMuted) {
+      savedVolume = savedVolume ? savedVolume : 100; // is Underfined?
+      setPlayerVolume(savedVolume);
+      return;
+    }
+    savedVolume = player.getVolume();
+    setPlayerVolume(0);
+  }
+  return vol
+};
+let mutePlayer = mutePlayerInit(); 
+
+function setPlayerVolume(vol) {
   // vol: number
   player.setVolume(Math.floor(vol));
   playerVolumeMarker.style.left = `${vol}%`;
@@ -73,7 +100,6 @@ function onPlayerReady(ev) {
   }, 1000);
   // Volume
   setPlayerVolume(player.getVolume());
-  
 }
 
 function onPlayerStateChange(ev) {

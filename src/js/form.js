@@ -1,4 +1,4 @@
-function main() {
+function myForm() {
   // Presets
   const API_EMAIL = "https://webdev-api.loftschool.com/sendmail";
 
@@ -103,7 +103,6 @@ function main() {
   }
 
   // Main Logic
-
   orderForm.addEventListener("submit", function (ev) {
     ev.preventDefault();
     removeAllErrorMsg(this); // Clearing Last Submit Errors
@@ -116,4 +115,4 @@ function main() {
 
   overlay.addEventListener("click", () => hideModal());
 }
-main();
+myForm();

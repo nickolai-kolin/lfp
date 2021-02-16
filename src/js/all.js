@@ -106,7 +106,7 @@ function main() {
     if (!Number.isInteger(section)) {
       section = sectionMapper[section];
     }
-    pageWrapper.style.transform = `translateY(${-section * 100}vh)`;
+    pageWrapper.style.transform = `translateY(${-section * 100}%)`;
     currentSection = section;
     opsSectionActivate(section);
   }
@@ -129,21 +129,6 @@ function main() {
     }, 1300);
   };
 
-
-
-
-
-
-
-// Main End 
-// init
-
-(function(){
-  window.scrollTo(0,0);
-})();
-
-}
-
-
+}// Main End 
 // Run main once DOMContentLoaded event fired
 $.when($.ready).then(main());
