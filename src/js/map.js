@@ -6,6 +6,7 @@ function init() {
     controls: [],
   });
   myMap.behaviors.disable('scrollZoom');
+  myMap.behaviors.disable('drag');
   let coords = [
     [25.201397, 55.269513],
     [25.189938, 55.300089],

@@ -16,7 +16,7 @@ const styles_list = [
   "src/sass/main.sass",
 ];
 const js_list = [
-  // "node_modules/jquery/jquery.min.js",
+  "node_modules/jquery-touchswipe/jquery.touchSwipe.min.js",
   "src/js/**/*.js"];
 
 const img_list = [
@@ -54,7 +54,7 @@ function javascript() {
   return src(js_list)
   .pipe(concat("bundle.js"))
   // .pipe(babel({presets: ['@babel/env']}))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(dest('dist'),{overwrite: true});
 }
 
