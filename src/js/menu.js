@@ -57,10 +57,7 @@ function allTriggersClickHandler(ev) {
 }
 
 //  Logic
-
-AllEventsControls = [
+const AllEventsControls = [
   {selector: "[data-menu-trigger]", eventType: "click", eventHandler: allTriggersClickHandler}
 ]
-
-
 _addAllEventListeners(AllEventsControls);
