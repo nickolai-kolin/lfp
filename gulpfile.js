@@ -14,6 +14,7 @@ const px2rem = require("gulp-smile-px2rem");
 const gcmq = require("gulp-group-css-media-queries");
 const sourcemaps = require("gulp-sourcemaps");
 const cleanCSS = require("gulp-clean-css");
+const imagemin = require("gulp-imagemin");
 
 const pug = require("gulp-pug");
 
@@ -70,7 +71,11 @@ const server = () => {
 };
 
 task("copy:img", () => {
-  return src(img_list).pipe(dest("dist/img", { overwrite: true }));
+  return src(img_list)
+  .pipe(imagemin([
+    imagemin.mozjpeg({quality: 75, progressive: true})
+  ]))
+  .pipe(dest("dist/img", { overwrite: true }));
 });
 
 function style() {
